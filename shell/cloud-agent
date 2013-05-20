@@ -1,0 +1,125 @@
+#!/bin/bash
+
+# chkconfig: 35 99 10
+# description: Cloud Agent
+
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+# 
+#   http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+# WARNING: if this script is changed, then all other initscripts MUST BE changed to match it as well
+
+. /etc/rc.d/init.d/functions
+
+whatami=cloud-agent
+
+# set environment variables
+
+SHORTNAME="$whatami"
+PIDFILE=/var/run/"$whatami".pid
+LOCKFILE=/var/lock/subsys/"$SHORTNAME"
+LOGFILE=/var/log/cloud/agent/agent.log
+PROGNAME="Cloud Agent"
+CLASS="com.cloud.agent.AgentShell"
+JSVC=`which jsvc 2>/dev/null`;
+
+# exit if we don't find jsvc
+if [ -z "$JSVC" ]; then
+    echo no jsvc found in path;
+    exit 1;
+fi
+
+unset OPTIONS
+[ -r /etc/sysconfig/"$SHORTNAME" ] && source /etc/sysconfig/"$SHORTNAME"
+
+# The first existing directory is used for JAVA_HOME (if JAVA_HOME is not defined in $DEFAULT)
+JDK_DIRS="/usr/lib/jvm/jre /usr/lib/jvm/java-6-openjdk /usr/lib/jvm/java-6-openjdk-i386 /usr/lib/jvm/java-6-openjdk-amd64 /usr/lib/jvm/java-6-sun /usr/lib/jvm/java-1.5.0-sun /usr/lib/j2sdk1.5-sun /usr/lib/j2sdk1.5-ibm"
+
+for jdir in $JDK_DIRS; do
+    if [ -r "$jdir/bin/java" -a -z "${JAVA_HOME}" ]; then
+        JAVA_HOME="$jdir"
+    fi
+done
+export JAVA_HOME
+
+SCP="/usr/share/java/commons-collections.jar:/usr/share/java/commons-dbcp.jar:/usr/share/java/commons-codec.jar:/usr/share/java/commons-logging.jar:/usr/share/java/commons-logging-api.jar:/usr/share/java/commons-pool.jar:/usr/share/java/commons-httpclient.jar:/usr/share/java/commons-fileupload.jar:/usr/share/java/ws-commons-util.jar:/usr/share/java/mysql-connector-java.jar:/usr/share/java/tomcat6-servlet-2.5-api.jar:/usr/share/java/tomcat6-el-2.1-api-6.0.24.jar:/usr/share/java/tomcat6-jsp-2.1-api-6.0.24.jar:/usr/share/java/jakarta-taglibs-core-1.1.1.jar:/usr/share/java/jakarta-taglibs-standard-1.1.1.jar:/usr/share/java/tomcat6/jasper.jar:/usr/share/java/tomcat6/jasper-el.jar:/usr/share/java/tomcat6/jasper-jdt.jar"
+DCP="/usr/share/java/axis2-1.5.1.jar:/usr/share/java/mysql-connector-java-5.1.21.jar:/usr/share/java/gson-1.7.1.jar:/usr/share/java/mail-1.4.jar:/usr/share/java/hamcrest-core-1.1.jar:/usr/share/java/esapi-2.0GA.jar:/usr/share/java/bcprov-jdk14-140.jar:/usr/share/java/mex-1.5.1-impl.jar:/usr/share/java/axis-jaxrpc-1.4.jar:/usr/share/java/xalan-2.7.0.jar:/usr/share/java/jsch-0.1.42.jar:/usr/share/java/axis2-java2wsdl-1.4.1.jar:/usr/share/java/ehcache-1.5.0.jar:/usr/share/java/javassist-3.9.0.GA.jar:/usr/share/java/xmlParserAPIs-2.6.0.jar:/usr/share/java/netscaler-sdx-1.0.jar:/usr/share/java/axiom-dom-1.2.7.jar:/usr/share/java/axis2-adb-codegen-1.4.1.jar:/usr/share/java/netscaler-1.0.jar:/usr/share/java/jasypt-1.9.0.jar:/usr/share/java/bcprov-jdk15-1.45.jar:/usr/share/java/xmltooling-1.3.1.jar:/usr/share/java/wsdl4j-1.6.2.jar:/usr/share/java/cglib-nodep-2.2.2.jar:/usr/share/java/jetty-6.1.26.jar:/usr/share/java/httpcore-nio-4.0-beta1.jar:/usr/share/java/axis2-1.5.1.jar:/usr/share/java/commons-collections-3.2.1.jar:/usr/share/java/joda-time-1.5.2.jar:/usr/share/java/not-yet-commons-ssl-0.3.9.jar:/usr/share/java/jaxen-1.1.1.jar:/usr/share/java/vmware-vim25-1.0.jar:/usr/share/java/httpcore-4.0.jar:/usr/share/java/vmware-vim-1.0.jar:/usr/share/java/woden-api-1.0M8.jar:/usr/share/java/ant-launcher-1.7.0.jar:/usr/share/java/rampart-core-1.5.jar:/usr/share/java/icontrol-1.0.jar:/usr/share/java/axis-1.4.jar:/usr/share/java/cloud-netscaler-sdx.jar:/usr/share/java/activation-1.1.jar:/usr/share/java/axis2-adb-1.4.1.jar:/usr/share/java/servlet-api-2.3.jar:/usr/share/java/ant-1.7.0.jar:/usr/share/java/neethi-2.0.4.jar:/usr/share/java/jstl-1.2.jar:/usr/share/java/manageontap-1.0.jar:/usr/share/java/rampart-trust-1.5.jar:/usr/share/java/backport-util-concurrent-3.1.jar:/usr/share/java/axiom-impl-1.2.8.jar:/usr/share/java/libvirt-0.4.9.jar:/usr/share/java/jul-to-slf4j-1.6.1.jar:/usr/share/java/antlr-2.7.7.jar:/usr/share/java/servlet-api-2.5-20081211.jar:/usr/share/java/commons-dbcp-1.4.jar:/usr/share/java/oro-2.0.8.jar:/usr/share/java/apache-log4j-extras-1.1.jar:/usr/share/java/vmware-vim.jar:/usr/share/java/wss4j-1.5.8.jar:/usr/share/java/trilead-ssh2-build213-svnkit-1.3-patch.jar:/usr/share/java/openws-1.4.1.jar:/usr/share/java/bcprov-jdk16-1.45.jar:/usr/share/java/slf4j-api-1.5.11.jar:/usr/share/java/axiom-api-1.2.8.jar:/usr/share/java/ws-commons-util-1.0.2.jar:/usr/share/java/jcip-annotations-1.0.jar:/usr/share/java/junit-4.10.jar:/usr/share/java/velocity-1.5.jar:/usr/share/java/xml-resolver-1.2.jar:/usr/share/java/xmlrpc-client-3.1.3.jar:/usr/share/java/geronimo-jms_1.1_spec-1.1.jar:/usr/share/java/geronimo-stax-api_1.0_spec-1.0.1.jar:/usr/share/java/vmware-vim25.jar:/usr/share/java/dom4j-1.6.1.jar:/usr/share/java/vmware-apputils.jar:/usr/share/java/axis2-mtompolicy-1.5.1.jar:/usr/share/java/axis2-kernel-1.4.1.jar:/usr/share/java/cloud-iControl.jar:/usr/share/java/XmlSchema-1.4.2.jar:/usr/share/java/woden-impl-dom-1.0M8.jar:/usr/share/java/log4j-over-slf4j-1.6.1.jar:/usr/share/java/commons-logging-1.1.1.jar:/usr/share/java/wstx-asl-3.2.4.jar:/usr/share/java/opensaml-1.1.jar:/usr/share/java/log4j-1.2.16.jar:/usr/share/java/commons-httpclient-3.1.jar:/usr/share/java/commons-io-1.4.jar:/usr/share/java/rampart-policy-1.5.jar:/usr/share/java/commons-fileupload-1.2.jar:/usr/share/java/antlr-runtime-3.4.jar:/usr/share/java/geronimo-activation_1.1_spec-1.0.1.jar:/usr/share/java/jcl-over-slf4j-1.6.1.jar:/usr/share/java/xml-apis-1.3.04.jar:/usr/share/java/xpp3_min-1.1.4c.jar:/usr/share/java/json-simple-1.1.jar:/usr/share/java/axis2-ant-plugin-1.4.1.jar:/usr/share/java/axis2-codegen-1.4.1.jar:/usr/share/java/commons-configuration-1.8.jar:/usr/share/java/javax.persistence-2.0.0.jar:/usr/share/java/xstream-1.3.1.jar:/usr/share/java/cloud-netscaler.jar:/usr/share/java/geronimo-javamail_1.4_spec-1.2.jar:/usr/share/java/xmlsec-1.4.2.jar:/usr/share/java/xmlrpc-common-3.1.3.jar:/usr/share/java/commons-lang-2.1.jar:/usr/share/java/ejb-api-3.0.jar:/usr/share/java/xercesImpl-2.8.1.jar:/usr/share/java/jmdns-2.1.jar:/usr/share/java/slf4j-jdk14-1.5.11.jar:/usr/share/java/annogen-0.1.0.jar:/usr/share/java/vmware-apputils-1.0.jar:/usr/share/java/stringtemplate-3.2.1.jar:/usr/share/java/opensaml-2.5.1-1.jar:/usr/share/java/commons-codec-1.6.jar:/usr/share/java/commons-discovery-0.5.jar:/usr/share/java/commons-pool-1.6.jar:/usr/share/java/jsr107cache-1.0.jar:/usr/share/java/jetty-util-6.1.26.jar:/usr/share/java/xapi-5.6.100-1-SNAPSHOT.jar:/usr/share/java/cloud-manageontap.jar:/usr/share/java/CAStorSDK-1.3.1-CS40.jar"
+ACP="/usr/share/java/cloud-utils.jar:/usr/share/java/cloud-api.jar:/usr/share/java/cloud-core.jar:/usr/share/java/cloud-server.jar:/usr/share/java/cloud-server-extras.jar:/usr/share/java/cloud-agent.jar:/usr/share/java/cloud-console-common.jar:/usr/share/java/cloud-console-proxy.jar:/usr/share/java/cloud-core-extras.jar:/usr/share/java/cloud-agent-extras.jar:/usr/share/java/cloud-plugin-hypervisor-kvm.jar:/usr/share/java/jna.jar"
+JCP="/usr/share/java/commons-daemon.jar"
+
+# We need to append the JSVC daemon JAR to the classpath
+# AgentShell implements the JSVC daemon methods
+export CLASSPATH="$SCP:$DCP:$ACP:$JCP:/etc/cloud/agent:/usr/lib64/cloud/agent"
+
+
+EDEBUG="-Xdebug -Xrunjdwp:transport=dt_socket,address=8787,server=y"
+
+start() {
+        echo -n $"Starting $PROGNAME: "
+	if hostname --fqdn >/dev/null 2>&1 ; then
+		#$JSVC  ${EDEBUG} -cp "$CLASSPATH"   -pidfile "$PIDFILE" $CLASS
+		java  ${EDEBUG} -cp "$CLASSPATH"    $CLASS
+		RETVAL=$?
+		echo
+	else
+		failure
+		echo
+		echo The host name does not resolve properly to an IP address.  Cannot start "$PROGNAME". > /dev/stderr
+		RETVAL=9
+	fi
+	[ $RETVAL = 0 ] && touch ${LOCKFILE}
+	return $RETVAL
+}
+
+stop() {
+	echo -n $"Stopping $PROGNAME: "
+	$JSVC -pidfile "$PIDFILE" -stop $CLASS
+	RETVAL=$?
+	echo
+	[ $RETVAL = 0 ] && rm -f ${LOCKFILE} ${PIDFILE}
+}
+
+
+# See how we were called.
+case "$1" in
+  start)
+	start
+	;;
+  stop)
+	stop
+	;;
+  status)
+        status -p ${PIDFILE} $SHORTNAME
+	RETVAL=$?
+	;;
+  restart)
+	stop
+	sleep 3
+	start
+	;;
+  condrestart)
+	if status -p ${PIDFILE} $SHORTNAME >&/dev/null; then
+		stop
+		sleep 3
+		start
+	fi
+	;;
+  *)
+	echo $"Usage: $whatami {start|stop|restart|condrestart|status|help}"
+	RETVAL=3
+esac
+
+exit $RETVAL

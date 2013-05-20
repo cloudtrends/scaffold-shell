@@ -1,0 +1,6 @@
+#!/bin/bash
+BRIDGE=$(/sbin/ip route list | awk '/^default / { print $NF }')
+/sbin/ifconfig $1 0.0.0.0 promisc up
+/usr/sbin/brctl addif $BRIDGE $1
+# END OF SCRIPT
+
