@@ -1,0 +1,42 @@
+
+
+
+2012-07-09:
+替换宏图的部分需要更新的代码时发现，有遗留的exception 没有替换，
+比如：server package里  StorageManagerImpl.java。中有 throw 没替换掉。
+
+C:\Users\chunfeng\workspace42_maintrunk\tools\el5-excep-tools>python cs_formal_g
+enerate_eme.py -P server -Vb -F C:\Java\exception-replace-formal\b\eme_generate_
+config\hongtu-2012-07-06-commit.txt
+
+
+
+
+
+
+
+
+
+代码替换日志：
+
+1、 生成5个替换包的配置文件并备份：utils,server,agent,api,core
+		python cs_formal_generate_eme.py -P XXX -V formal_0703
+		
+	 备份文件名：backup-eme_generate_config.rar
+	 
+	 
+2、代码替换：
+		python cs_formal_replace_main.py -P XXX -V formal_0703
+
+		对五个包执行替换（每次操作完后，不要选择回滚，svn commit），并备份源文件。
+
+		backup-cs_source_backup.rar
+
+
+
+
+		
+		
+		
+
+

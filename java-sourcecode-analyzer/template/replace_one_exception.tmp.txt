@@ -1,0 +1,7 @@
+#begin
+java_source_file=server\src\com\cloud\vm\UserVmManagerImpl.java
+exception_md5=9fbe7f28d0099eacc095e4d9591a25f4
+# for example 
+exception_from=ConfigurationException _ex_=(ConfigurationException) ESECreater.create("ConfigurationException","_B_Unable to find the ipassoc.sh_E_");throw _ex_;
+exception_to=ConfigurationException _ex_=(ConfigurationException) ESECreater.create("ConfigurationException","_B_REPLACE MESSAGE Unable to find the ipassoc.sh_E_");throw _ex_;
+#end

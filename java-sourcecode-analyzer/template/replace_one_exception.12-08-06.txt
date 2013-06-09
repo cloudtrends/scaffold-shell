@@ -1,0 +1,10 @@
+#begin
+#java_source_file=server\src\com\cloud\vm\UserVmManagerImpl.java
+java_source_file=server\src\com\cloud\vm\UserVmManagerImpl.java
+exception_md5=9fbe7f28d0099eacc095e4d9591a25f4
+# for example 
+exception_from=InvalidParameterValueException _ex_=(InvalidParameterValueException) ESECreater.create("InvalidParameterValueException","_B_Cannot migrate VM, VM is already presnt on this host, please specify valid destination host to migrate the VM_E_");throw _ex_;
+exception_to=InvalidParameterValueException _ex_=(InvalidParameterValueException) ESECreater.create("InvalidParameterValueException","_B_Cannot migrate VM, VM is already present on this host, please specify valid destination host to migrate the VM_E_");throw _ex_;
+#end
+#msg ori properties:025f356fa6a195bf8b987e5a5768ba2b
+#msg new properties:15c95b9011791eba17db17e5ee1cf1c6

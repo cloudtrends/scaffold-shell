@@ -1,0 +1,213 @@
+    1  mount /dev/cdrom /mnt/
+    2  cp /mnt/VMwareTools-9.0.0-782409.tar.gz  ./
+    3  tar zxf VMwareTools-9.0.0-782409.tar.gz 
+    4  cd vmware-tools-distrib/
+    5  ./vmware-install.pl 
+    6  ls
+    7  ./vmware-install.pl 
+    8  ls -lh
+    9  ./vmware-install.pl 
+   10  yum install perl
+   11  ifconfig eth0 192.168.0.210 netmask 255.255.255.0 up
+   12  service network restar
+   13  service network restart
+   14  vi /etc/resolv.conf 
+   15  yum install perl
+   16  ifconfig eth0 192.168.0.210 netmask 255.255.255.0 gateway 192.168.0.1 up
+   17  route add default gw 192.168.0.1
+   18  service network restart
+   19  ping www.baidu.com
+   20  ping 192.168.0.1
+   21  ifconfig
+   22  ifconfig eth0 down
+   23  ifconfig eth0 192.168.0.210 netmask 255.255.255.0 up
+   24  service network restart
+   25  ping 192.168.0.1
+   26  ifconfig eth0 192.168.0.210 netmask 255.255.255.0 boardcast 192.168.0.254
+   27  ifconfig eth0 192.168.0.210 netmask 255.255.255.0 boardcast 192.168.0.254 up
+   28  ifconfig eth0 address 192.168.0.210 netmask 255.255.255.0 
+   29  ifconfig eth0 192.168.0.210 netmask 255.255.255.0 broadcast 192.168.0.254
+   30  service network restart
+   31  ifconfig
+   32  ifconfig eth0 up
+   33  ifconfig
+   34  ping www.baidu.com
+   35  ifconfig eth0 down
+   36  ifconfig eth0 192.168.0.210 netmask 255.255.255.0 broadcast 192.168.0.254 up
+   37  ifconfig
+   38  ping www.baidu.com
+   39  ping 192.168.0.1
+   40  route add default gw 192.168.0.1
+   41  ping 192.168.0.1
+   42  route
+   43  ping 192.168.0.1
+   44  route add default gateway 192.168.0.1
+   45  ping 192.168.0.1
+   46  ifconfig eth0 192.168.120.210 netmask 255.255.255.0 broadcast 192.168.0.254 up
+   47  service network restart
+   48  ifcnofig -a
+   49  ifconfig
+   50  ifconfig eth0 192.168.120.210 netmask 255.255.255.0 broadcast 192.168.120.254 up
+   51  ifconfig
+   52  route del gw 192.168.0.1
+   53  route del default 192.168.0.1
+   54  route del default gw
+   55  route del default gw 192.168.0.1
+   56  route add gw 192.168.120.1
+   57  route add default gw 192.168.120.1
+   58  ping 192.168.120.1
+   59  ping www.baidu.com
+   60  yum install perl -y
+   61  ./vmware-install.pl 
+   62  shutdown -h 0
+   63  ls
+   64  exit
+   65  ./core-autodeploy.sh 
+   66  rpm -qa | grep mysql
+   67  yum remove mysql-libs*
+   68  ./core-autodeploy.sh 
+   69  ls -lh
+   70  exit
+   71  ./core-autodeploy.sh 
+   72  exit
+   73  ls -lh
+   74  route add default gw 192.168.120.1
+   75  ifconfig eth0 192.168.120.210 netmask 255.255.255.0 broadcast 192.168.120.254 up
+   76  service network restart
+   77  ping www.baidu.com
+   78  ping 192.168.120.1
+   79  ifconfig -a
+   80  ifconfig eth0 down
+   81  ifconfig eth0 192.168.120.210 netmask 255.255.255.0 broadcast 192.168.120.254 up
+   82  service network restart
+   83  ping www.baidu.com
+   84  route
+   85  route add default gw 192.168.120.1
+   86  route -n 
+   87  ip route add to 192.168.120.0/24 dev eth0
+   88  ifconfig eth0 192.168.120.210 netmask 255.255.255.0 broadcast 192.168.120.254 up
+   89  ip route add to 192.168.120.0/24 dev eth0
+   90  route add default gw 192.168.120.1
+   91  ping 192.168.120.1
+   92  ping www.baidu.com
+   93  ls
+   94  java
+   95  rpm -ivh jre-6u31-linux-amd64.rpm 
+   96  ls
+   97  vi ./core-autodeploy.sh 
+   98  ls -lh
+   99  ./core-autodeploy.sh 
+  100  yum install wget -y
+  101  ./core-autodeploy.sh 
+  102  shutdown -h 0
+  103  exit
+  104  ifconfig eth0 192.168.120.210 netmask 255.255.255.0 up
+  105  ping www.baidu.com
+  106  service network restart
+  107  ping www.baidu.com
+  108  route add default gw 192.168.120.1
+  109  ifconfig
+  110  ifconfig eth0 192.168.120.210 netmask 255.255.255.0 up
+  111  ifconfig
+  112  ping www.baidu.com
+  113  route add default gw 192.168.120.1
+  114  ping www.baidu.com
+  115  service network restart
+  116  ping www.baidu.com
+  117  route
+  118  ifconfig eth0 192.168.120.210 netmask 255.255.255.0 up
+  119  route
+  120  route add default gw 192.168.120.1
+  121  route
+  122  ping www.baidu.com
+  123  ping 192.168.120.1
+  124  df -lh
+  125  shutdown -h 0
+  126  rpm -qa | grep MySQL
+  127  service mysql stop
+  128  service mysqld stop
+  129  rpm -e --nodeps MySQL-shared-5.5.28-1.linux2.6.x86_64
+  130  rpm -e --nodeps MySQL-server-5.5.28-1.linux2.6.x86_64
+  131  rpm -e --nodeps MySQL-shared-5.5.28-compat-1.linux2.6.x86_64
+  132  rpm -e --nodeps MySQL-shared-5.5.28*
+  133  rpm -e --nodeps MySQL-shared*
+  134  rpm -e --nodeps MySQL-cli
+  135  rpm -e --nodeps MySQL-client-5.5.28-1.linux2.6.x86_64
+  136  service rabbitmq-server stop
+  137  rpm -qa | grep rabbit
+  138  rpm -e --nodeps rabbitmq-ser*
+  139  rpm -e --nodeps rabbitmq-server-2.8.7-1.noarch
+  140  rpm -qa | grep mem
+  141  rpm -e --nodeps memcached-1.4.4-3.e16.x86_64
+  142  rpm -e --nodeps memcached-1.4.4*
+  143  vi /opt/zenoss/bin/zenoss
+  144  cat /opt/zenoss/etc/daemons.txt 
+  145  rm /etc/sysconfig/network-scripts/ifcfg-eth0 
+  146  rm /etc/sysconfig/network-scripts/ifcfg-eth1
+  147  ls
+  148  vi /etc/udev/rules.d/70-persistent-net.rules 
+  149  shutdown -h 0
+  150  vi /etc/init.d/cloud-early-config 
+  151  cat /etc/udev/rules.d/70-persistent-net.rules 
+  152  vi /etc/udev/rules.d/70-persistent-net.rules 
+  153  ls /etc/sysconfig/network-scripts/
+  154  shutdown -h 0
+  155  ip addr
+  156  vi config_ip.sh
+  157  chmod +x ./config_ip.sh 
+  158  vi /etc/profile
+  159  vi /etc/rc.local 
+  160  reboot
+  161  exit
+  162  vi /etc/hosts
+  163  ls
+  164  cat /etc/update_collector_configs 
+  165  vi /etc/update_collector_configs 
+  166  su - zenoss
+  167  vi /etc/init.d/cloud-early-config 
+  168  su - zenoss
+  169  ls
+  170  reboot
+  171  ip addr
+  172  route
+  173  route add default gw 10.1.1.111
+  174  route add default gw 10.1.1.1
+  175  vi config_ip.sh 
+  176  reboot
+  177  ls
+  178  vi /etc/rc.local 
+  179  vi /etc/profile
+  180  reboot
+  181  ls
+  182  service zenoss restart
+  183  tail -f /opt/zenoss/log/zenstatus.log 
+  184  tail -f /opt/zenoss/log/zenstatus.log /opt/zenoss/log/zenmodeler.log /opt/zenoss/log/zencommand.log 
+  185  ip addr
+  186  vi config_ip.sh 
+  187  ping 192.168.120.111
+  188  ping 192.168.120.110
+  189  reboot
+  190  tail -f /opt/zenoss/log/zenstatus.log /opt/zenoss/log/zenmodeler.log /opt/zenoss/log/zencommand.log 
+  191  service zenoss restart
+  192  service zenoss status
+  193  service zenoss restart
+  194  ip addr
+  195  yum install git -y
+  196  vi config_ip.sh 
+  197  reboot
+  198  ip addr
+  199  service snmpd restart
+  200* mv /etc/snmp/snmpd.conf /etc/snmp/snmpd.conf.oldd
+  201  vi /etc/snmp/snmpd.conf
+  202  service snmpd restart
+  203  service iptables stop
+  204  chkconfig iptables off
+  205  cat /etc/snmp/snmpd.conf
+  206  ip addr
+  207  netstat -tnl | grep 8091
+  208  netstat -tnl 
+  209  netstat -tnl | grep 8081
+  210  netstat -tnl | grep 8011
+  211  netstat -tnl | grep 8091
+  212  su - zenoss
+  213  history > ~/cmd130520.txt

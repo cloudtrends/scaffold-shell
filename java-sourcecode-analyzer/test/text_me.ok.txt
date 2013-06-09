@@ -1,0 +1,29 @@
+                try {
+                        ConsoleProxyClientParam param = new ConsoleProxyClientParam();
+                        param.setClientHostAddress(host);
+                        param.setClientHostPort(port);
+                        param.setClientHostPassword(sid);
+                        param.setClientTag(tag);
+                        param.setTicket(ticket);
+                        param.setClientTunnelUrl(console_url);
+                        param.setClientTunnelSession(console_host_session);
+
+                        viewer = ConsoleProxy.getAjaxVncViewer(param, ajaxSessionIdStr);
+                } catch(Exception e) {
+
+                        s_logger.warn("Failed to create viewer due to " + e.getMessage(), e);
+
+                        String[] content = new String[] {
+                                "<html><head></head><body>",
+                                "<div id=\"main_panel\" tabindex=\"1\">",
+                                "<p>Access is denied for the console session. Please close the window and retry again</p>",
+                                "</div></body></html>"
+                        };
+
+                        StringBuffer sb = new StringBuffer();
+                        for(int i = 0; i < content.length; i++)
+                                sb.append(content[i]);
+
+                        sendResponse(t, "text/html", sb.toString());
+                        return;
+                }
