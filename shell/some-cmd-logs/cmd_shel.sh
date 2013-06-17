@@ -1,0 +1,240 @@
+    1  ifconfig eth0 192.168.120.254 netmask 255.255.255.0 
+    2  vi /etc/resolv.conf 
+    3  ping www.baidu.com
+    4  route add default gw 192.168.120.1
+    5  ping www.baidu.com
+    6  rpm -qa | grep mysql
+    7  yum remove mysql-libs*
+    8  ls
+    9  ./core-autodeploy.sh 
+   10  ps aux | grep 
+   11  ps aux 
+   12  reboot
+   13  ls
+   14  ./core-autodeploy.sh 
+   15  shutdown -h 0
+   16  ls
+   17  ifconfig -a 
+   18  ip addr
+   19  ifconfig eth0 192.168.120.154 netmask 255.255.255.0 up
+   20  route add default gw 192.168.120.1
+   21  service iptables stop
+   22  service iptables off
+   23  chkconfig iptables off
+   24  shutdown -h 0
+   25  ls
+   26  ifconfig
+   27  ifconfig eth0 192.168.120.111 netmask 255.255.255.0 up
+   28  route add default gw 192.168.120.1
+   29  vi /etc/resolv.conf 
+   30  service zenoss restart
+   31  ls
+   32  Host  h17
+   33  HostName 192.168.120.17
+   34  User root
+   35  tail -f /opt/zenoss/log/zensyslog.log /opt/zenoss/log/zenperfsnmp.log /opt/zenoss/log/zencommand.log /opt/zenoss/log/zenactiond.log  /opt/zenoss/log/zenjobs.log /opt/zenoss/log/zenmodeler.log /opt/zenoss/log/zenactiond.log 
+   36  vi /etc/sysconfig/network-scripts/ifcfg-eth0 
+   37  vi /etc/sysconfig/network-scripts/ifcfg-eth1
+   38  reboot
+   39  cd /opt/zenoss/
+   40  find ./ -name "*.py" | xargs grep getGraphDefs
+   41  vi ./Products/Zuul/routers/device.py
+   42  service zenoss restart
+   43  exit
+   44  vi /opt/zenoss/Products/Zuul/routers/device.py
+   45  su - acce
+   46  vi /opt/zenoss/Products/Zuul/routers/device.py
+   47  find /opt/zenoss/ -name "*.py" | xargs grep "rrdtool.fetch"
+   48  vi /opt/zenoss/Products/ZenRRD/RRDUtil.py
+   49  vi /opt/zenoss/Products/Zuul/routers/device.py
+   50  find /opt/zenoss/ -name "*.py" | xargs grep "rrd_daemon_args"
+   51  vi /opt/zenoss/Products/ZenModel/ThresholdInstance.py
+   52  vi /opt/zenoss/Products/Zuul/routers/device.py
+   53  vi ./Products/Zuul/routers/device.py
+   54  vi /opt/zenoss/Products/Zuul/routers/device.py
+   55  service zenoss restart
+   56  vi /opt/zenoss/Products/Zuul/routers/device.py
+   57  service zenoss restart
+   58  vi /opt/zenoss/Products/Zuul/routers/device.py
+   59  service zenoss restart
+   60  vi /opt/zenoss/Products/Zuul/routers/device.py
+   61  service zenoss restart
+   62  ls
+   63  vi /opt/zenoss/Products/Zuul/routers/device.py
+   64  cat /opt/zenoss/Products/Zuul/routers/device.py
+   65  exit
+   66  service zenoss restart
+   67  ip addr
+   68  service zenoss restart
+   69  exit
+   70  vi /opt/zenoss/Products/Zuul/routers/device.py
+   71  exit
+   72  service zenoss restart
+   73  ls /opt/zenoss/log/ -lh
+   74  ls /opt/zenoss/log/ -lth
+   75  tail -f /opt/zenoss/log/Z2.log
+   76  service zenoss restart
+   77  exit
+   78  tail -f /opt/zenoss/log/zensyslog.log
+   79  exit
+   80  ls
+   81  vi /opt/zenoss/Products/Zuul/routers/device.py
+   82  ls
+   83  vi device-130523.py 
+   84  cd ~
+   85  vi .vimrc
+   86  vi device-130523.py 
+   87  exit
+   88  vi device-130523.py 
+   89  exit
+   90  tail -f /opt/zenoss/log/zensyslog.log  /opt/zenoss/log/zeneventd.log /opt/zenoss/log/zenbuild.log /opt/zenoss/log/zenmodeler.log /opt/zenoss/log/zenhub.log /opt/zenoss/log/zeneventlog.log /opt/zenoss/log/zenactiond.log /opt/zenoss/log/zeneventserver-stdio.2012_10_22.log /opt/zenoss/log/zencommand.log /opt/zenoss/log/zenjmx.log /opt/zenoss/log/zeneventserver.log  /opt/zenoss/log/zenjobs.log   /opt/zenoss/log/zenping.log /opt/zenoss/log/event.log  /opt/zenoss/log/zenperfsnmp.log /opt/zenoss/log/zenprocess.log /opt/zenoss/log/install.log /opt/zenoss/log/zentrap.log 
+   91  ifconfig
+   92  exit
+   93  service zenoss restart
+   94  exit
+   95  vi /opt/zenoss/Products/Zuul/routers/device.py
+   96  exit
+   97  vi device-130523.py 
+   98  vi /opt/zenoss/Products/Zuul/routers/device.py
+   99  scp /opt/zenoss/Products/Zuul/routers/device.py root@172.16.204.135:/opt/zenoss/Products/Zuul/routers/device.py
+  100  ssh root@172.16.204.135
+  101  scp /opt/zenoss/Products/Zuul/routers/device.py root@172.16.204.135:/opt/zenoss/Products/Zuul/routers/device.py
+  102  scp /opt/zenoss/Products/Zuul/routers/device.py root@172.16.204.137:/opt/zenoss/Products/Zuul/routers/device.py
+  103  exit
+  104  service zenoss restart
+  105  scp /opt/zenoss/Products/Zuul/routers/device.py root@172.16.204.137:/opt/zenoss/Products/Zuul/routers/device.py
+  106  ssh roo@172.16.204.137  "service zenoss restart"
+  107  ssh roo@172.16.204.137 
+  108  ssh root@172.16.204.137  "service zenoss restart"
+  109  exit
+  110  vi /opt/zenoss/Products/Zuul/routers/device.py
+  111  exit
+  112  service zenoss restart
+  113  scp /opt/zenoss/Products/Zuul/routers/device.py root@172.16.204.137:/opt/zenoss/Products/Zuul/routers/device.py
+  114  ssh root@172.16.204.137  "service zenoss restart"
+  115  service zenoss restart
+  116  scp /opt/zenoss/Products/Zuul/routers/device.py root@172.16.204.137:/opt/zenoss/Products/Zuul/routers/device.py
+  117  ssh root@172.16.204.137  "service zenoss restart"
+  118  service zenoss restart
+  119  scp /opt/zenoss/Products/Zuul/routers/device.py root@172.16.204.137:/opt/zenoss/Products/Zuul/routers/device.py
+  120  ssh root@172.16.204.137  "service zenoss restart"
+  121  exit
+  122  tail -f /opt/zenoss/log/zeneventd.log 
+  123  tail -f /opt/zenoss/log/zensyslog.log  /opt/zenoss/log/zeneventd.log /opt/zenoss/log/zenbuild.log /opt/zenoss/log/zenmodeler.log /opt/zenoss/log/zenhub.log /opt/zenoss/log/zeneventlog.log /opt/zenoss/log/zenactiond.log /opt/zenoss/log/zeneventserver-stdio.2012_10_22.log /opt/zenoss/log/zencommand.log /opt/zenoss/log/zenjmx.log /opt/zenoss/log/zeneventserver.log  /opt/zenoss/log/zenjobs.log   /opt/zenoss/log/zenping.log /opt/zenoss/log/event.log  /opt/zenoss/log/zenperfsnmp.log /opt/zenoss/log/zenprocess.log /opt/zenoss/log/install.log /opt/zenoss/log/zentrap.log 
+  124  exit
+  125  cd /opt/zenoss/
+  126  ls
+  127  vi /opt/zenoss/Products/Zuul/routers/device.py
+  128  pwd
+  129  vi /opt/zenoss/Products/Zuul/routers/device.py
+  130  scp /opt/zenoss/Products/Zuul/routers/device.py root@172.16.204.135:/opt/zenoss/Products/Zuul/routers/device.py
+  131  vi /opt/zenoss/Products/Zuul/routers/device.py
+  132  vi /opt/zenoss/Products/ZenRRD/RenderServer.py
+  133  vi /opt/zenoss/Products/Zuul/routers/device.py
+  134  ssh root@172.16.204.135 " rf -f /opt/zenoss/Products/Zuul/routers/device.py"
+  135  ssh root@172.16.204.135 " rm -f /opt/zenoss/Products/Zuul/routers/device.py"
+  136  scp /opt/zenoss/Products/Zuul/routers/device.py root@172.16.204.135:/opt/zenoss/Products/Zuul/routers/device.py
+  137  vi /opt/zenoss/Products/Zuul/routers/device.py
+  138  scp /opt/zenoss/Products/Zuul/routers/device.py root@172.16.204.135:/opt/zenoss/Products/Zuul/routers/device.py
+  139  ssh-keygen
+  140  ssh-copy-id -i ~/.ssh/id_rsa.pub root@172.16.204.135
+  141  vi /opt/zenoss/Products/Zuul/routers/device.py
+  142  ip addr
+  143  vi /opt/zenoss/etc/hubpasswd
+  144  vi /opt/zenoss/etc/global.conf
+  145  service zenoss restart
+  146  ip addr
+  147  ls
+  148  cd ~
+  149  ls
+  150  vi /etc/sysconfig/network-scripts/ifcfg-eth2 
+  151  ping 192.168.120.110
+  152  ip addr
+  153  yum install ntp
+  154  service ntpd restart
+  155  chkconfig ntpd on
+  156  ntpupdate pool.ntp.org
+  157  ntpdate pool.ntp.org
+  158  service ntpd restart
+  159  ntpdate pool.ntp.org
+  160  date
+  161  vi /opt/zenoss/Products/Zuul/routers/device.py
+  162  cp /opt/zenoss/Products/Zuul/routers/device.py ~/device-130523.py
+  163  vi /opt/zenoss/Products/Zuul/routers/device.py
+  164  scp /opt/zenoss/Products/Zuul/routers/device.py root@172.16.204.135:/opt/zenoss/Products/Zuul/routers/device.py
+  165  vi /opt/zenoss/Products/Zuul/routers/device.py
+  166  exit
+  167  ls
+  168  tail -f /opt/zenoss/log/zensyslog.log  /opt/zenoss/log/zeneventd.log /opt/zenoss/log/zenbuild.log /opt/zenoss/log/zenmodeler.log /opt/zenoss/log/zenhub.log /opt/zenoss/log/zeneventlog.log /opt/zenoss/log/zenactiond.log /opt/zenoss/log/zeneventserver-stdio.2012_10_22.log /opt/zenoss/log/zencommand.log /opt/zenoss/log/zenjmx.log /opt/zenoss/log/zeneventserver.log  /opt/zenoss/log/zenjobs.log   /opt/zenoss/log/zenping.log /opt/zenoss/log/event.log  /opt/zenoss/log/zenperfsnmp.log /opt/zenoss/log/zenprocess.log /opt/zenoss/log/install.log /opt/zenoss/log/zentrap.log 
+  169  /opt/zenoss/bin/zendisc run --now -d 192.168.120.110 --monitor localhost --deviceclass /Server/Linux --prod_state 1000
+  170  su - zenoss
+  171  service zenoss restart
+  172  /opt/zenoss/bin/zendisc run --now -d 192.168.120.110 --monitor localhost --deviceclass /Server/Linux --prod_state 1000
+  173  su - zenoss
+  174  service zenoss restart
+  175  ls /opt/zenoss/perf/Devices/10.1.1.12/
+  176  ls /opt/zenoss/perf/Devices
+  177  ls /opt/zenoss/perf/Devices/zenosscollector/
+  178  ls /opt/zenoss/perf/Devices/
+  179  ls /opt/zenoss/perf/Devices/192.168.120.17/
+  180  tail -f /opt/zenoss/log/zensyslog.log  /opt/zenoss/log/zeneventd.log /opt/zenoss/log/zenbuild.log /opt/zenoss/log/zenmodeler.log /opt/zenoss/log/zenhub.log /opt/zenoss/log/zeneventlog.log /opt/zenoss/log/zenactiond.log /opt/zenoss/log/zeneventserver-stdio.2012_10_22.log /opt/zenoss/log/zencommand.log /opt/zenoss/log/zenjmx.log /opt/zenoss/log/zeneventserver.log  /opt/zenoss/log/zenjobs.log   /opt/zenoss/log/zenping.log /opt/zenoss/log/event.log  /opt/zenoss/log/zenperfsnmp.log /opt/zenoss/log/zenprocess.log /opt/zenoss/log/install.log /opt/zenoss/log/zentrap.log 
+  181  exit
+  182  service zenoss restart
+  183  exit
+  184  vi /opt/zenoss/Products/Zuul/routers/device.py
+  185  vi /opt/zenoss/Products/ZenRRD/RenderServer.py
+  186  find /opt/zenoss/Products/ -name "*.py" | xargs grep "getGraphDefs("
+  187  vi /opt/zenoss/Products/Zuul/facades/devicefacade.py
+  188  vi /opt/zenoss/Products/Zuul/routers/device.py
+  189  exit
+  190  telnet
+  191  yum install telnet
+  192  telnet 192.168.120.110 8091
+  193  cat /opt/zenoss/etc/zenhub.conf
+  194  cat /opt/zenoss/etc/global.conf
+  195  cat /opt/zenoss/etc/hubpasswd
+  196  exit
+  197  ls
+  198  vi rrd_test.sh
+  199  chmod +x rrd_test.sh 
+  200  ./rrd_test.sh 
+  201  service zenoss restart
+  202  ip addr
+  203  service zenoss restart
+  204  exit
+  205  find /opt/zenoss/Products/ -name "*.python"  | xargs grep "addDevice("
+  206  find /opt/zenoss/Products/ -name "*.py"  | xargs grep "addDevice("
+  207  vi /opt/zenoss/Products/Zuul/interfaces/device.py
+  208  vi /opt/zenoss/Products/Zuul/facades/devicefacade.py
+  209  find /opt/zenoss/Products/ -name "*.py"  | xargs grep "addDeviceCreationJob("
+  210  vi /opt/zenoss/Products/ZenModel/PerformanceConf.py
+  211  find /opt/zenoss/Products/ -name "*.py"  | xargs grep "DeviceCreationJob"
+  212  vi /opt/zenoss/Products/ZenModel/ZDeviceLoader.py
+  213  find /opt/zenoss/Products/ -name "*.py"  | xargs grep "load_device("
+  214  vi /opt/zenoss/Products/ZenModel/ZDeviceLoader.py
+  215  find /opt/zenoss/Products/ -name "*.py"  | xargs grep "run_zendisc("
+  216  vi /opt/zenoss/Products/ZenModel/ZDeviceLoader.py
+  217  history > ~/cmd130530.txt
+  218  vi cmd130530.txt 
+  219  exit
+  220  history | grep 10.1.1.12
+  221  su - zenoss
+  222  exit
+  223  history | grep "/opt/zenoss/bin/"
+  224  exit
+  225  service zenoss restart
+  226  /opt/zenoss/bin/zendisc run --now -d 10.1.1.12 --monitor 192.168.120.110 --deviceclass /Server/Linux --prod_state 1000
+  227  su - zenoss
+  228  exit
+  229  find /opt/zenoss/ -name "*.py" | xargs grep "Bus Error"
+  230  find /opt/zenoss/ -name "*.py" | xargs grep "Bus error"
+  231  find /opt/zenoss/ -name "*.py" | xargs grep "Bus"
+  232  find /opt/zenoss/ -name "*.py" | xargs grep "Bus "
+  233  ip addr
+  234  /opt/zenoss/bin/zendisc run --now -d 10.1.1.13 --monitor 192.168.120.109 --deviceclass /Server/SSH/Linux --prod_state 1000
+  235  su - zenoss
+  236  service zenoss restart
+  237  exit
+  238  history
+  239  exit
+  240  history > cmd_130606.txt

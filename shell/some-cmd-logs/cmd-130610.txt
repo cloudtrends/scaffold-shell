@@ -1,0 +1,500 @@
+    3  ssh s12
+    4  scp s12:/root/cloud-install-sys-tmplt-kvm.sh ./
+    5  ssh s12
+    6  exit
+    7  ssh s12
+    8  exit
+    9  ssh s30
+   10  ssh s12
+   11  ssh s29
+   12  exit
+   13  ping 172.16.206.65
+   14  ping 172.16.206.65
+   15  ssh s12
+   16  exit
+   17  ssh s30
+   18  ssh s12
+   19  exit
+   20  ssh s12
+   21  exit
+   22  ssh s21
+   23  exit
+   24  cd shell
+   25  ls -lh
+   26  cat mysql_priviledge.sh 
+   27  cat mysql_un_denied.sh 
+   28  ls -lh
+   29  ping 172.16.206.201
+   30  ssh s12
+   31  vi readme.txt
+   32  ssh-copy-id -i ~/.ssh/id_rsa.pub root@10.1.1.37
+   33  ssh root@10.1.1.37
+   34  ls
+   35  scp ./mount_public.sh root@10.1.1.37:/root
+   36  scp ./mount_public_dir.sh root@10.1.1.37:/root
+   37  exit
+   38  cd shell
+   39  vi start_kvm_tap.sh
+   40  exit
+   41  ssh root@10.1.1.37
+   42  ssh root@10.1.1.37
+   43  ssh root@10.1.1.37
+   44  ssh root@10.1.1.37
+   45  ssh 10.1.1.1
+   46  ssh root@10.1.1.1
+   47  ssh root@10.1.1.37
+   48  cd shell
+   49  scp ./start_kvm_tap.sh root@10.1.1.37:/root/
+   50  ssh root@10.1.1.37
+   51  vi qemu-ifup
+   52  touch qemu-ifdown
+   53  scp qemu-if* root@10.1.1.37
+   54  scp qemu-if* root@10.1.1.37:/root
+   55  ssh root@10.1.1.37
+   56  ssh s37
+   57  ssh-copy-id -i ~/.ssh/id_rsa.pub s37
+   58  ssh s37
+   59  ssh s37
+   60  xit
+   61  exit
+   62  ssh s29
+   63  exit
+   64  ssh s12
+   65  exit
+   66  ssh s12
+   67  exit
+   68  ssh s29
+   69  exit
+   70  ssh s12
+   71  exit
+   72  ssh s12
+   73  exit
+   74  ssh s37
+   75  exit
+   76  ping 192.168.120.209
+   77  exit
+   78  ssh s37
+   79  ssh s37
+   80  ssh s37
+   81  exit
+   82  ssh s37
+   83  exit
+   84  ssh s37
+   85  exit
+   86  ssh root@192.168.120.209
+   87  ssh root@192.168.120.209
+   88  ssh root@192.168.120.209
+   89  ssh root@192.168.120.209
+   90  ssh root@192.168.120.209
+   91  ssh s37
+   92  ls
+   93  cd collector
+   94  scp s37:/root/centos-zenoss-collector.qcow2 ./
+   95  ssh s37
+   96  scp s37:/root/ centos-zenoss-collector.qcow2.gz.zip ./
+   97  scp s37:/root/centos-zenoss-collector.qcow2.gz.zip ./
+   98  ls
+   99  exit
+  100  ssh s37
+  101  exit
+  102  ssh s37
+  103  cd collector
+  104  ls
+  105  ls -lh
+  106  ./cp_to_collector.sh  192.168.120.209
+  107  ssh s37
+  108  exit
+  109  cd shell/
+  110  ;s
+  111  ls
+  112  vi mount_public.sh 
+  113  scp ./mount_public.sh s12:/root
+  114  scp ./mount_public_dir.sh s12:/root
+  115  scp ./mount_public_dir.sh s37:/root
+  116  scp ./mount_public.sh s37:/root
+  117  exit
+  118  ssh s37
+  119  exit
+  120  ssh s37
+  121  ssh s12
+  122  cd shell/
+  123  ls
+  124  ssh h12
+  125  ssh h12
+  126  ssh s27
+  127  ssh s12
+  128  ls
+  129  ssh s12
+  130  exit
+  131  ssh s12
+  132  exit
+  133  ssh s12
+  134  ssh s30
+  135  exit
+  136  ssh s37
+  137  ssh s12
+  138  exit
+  139  ssh s29
+  140  exit
+  141  ssh s29
+  142  exit
+  143  ssh s12
+  144  exit
+  145  cd shell
+  146  ls
+  147  ssh s12
+  148  exit
+  149  cd shell
+  150  ssh s12
+  151  exit
+  152  ssh s37
+  153  ssh s12
+  154  exit
+  155  ssh s12
+  156  exit
+  157  cd shell/
+  158  ls
+  159  vi clean_for_make_template.sh
+  160  exit
+  161  ssh root@192.168.120.1
+  162  ssh s12
+  163  cd shell
+  164  ls
+  165  scp s12:/root/api_test_kvm.py api_test_kvm-ok.py 
+  166  vi traffic.sh
+  167  exit
+  168  ssh root@192.168.120.111
+  169  sshs35
+  170  ssh s35
+  171  ssh s13
+  172  ssh s29
+  173  ssh s30
+  174  exit
+  175  cd tmp/
+  176  ls -lh
+  177  ls -lh
+  178  scp ./zenoss-collector-tmplt-for-vmware.ova  s12
+  179  scp ./zenoss-collector-tmplt-for-vmware.ova  s12:/root
+  180  scp ./zenoss-collector-tmplt-for-vmware.ova  s12:/root
+  181  ssh s12
+  182  ssh s12
+  183  ssh s12
+  184  ssh s12
+  185  ssh root@192.168.120.1
+  186  ssh root@192.168.120.1111
+  187  ssh root@192.168.120.111
+  188  ssh s12
+  189  ls
+  190  cd shell/
+  191  ls
+  192  cp cloud-install-sys-tmplt-kvm.sh cloud-install-sys-tmplt-ova.sh
+  193  ssh root@192.168.120.111
+  194  ssh s12
+  195  ls
+  196  scp cloud-install-sys-tmplt-ova.sh s12:/root
+  197  cd ../sys-tmplt/
+  198  ls
+  199  scp acton-systemvm-02062012.ova s12:/root
+  200  ssh s12
+  201  exit
+  202  ssh root@192.168.120.111
+  203  exit
+  204  ssh root@192.168.120.111
+  205  exit
+  206  ssh root@192.168.120.111
+  207  exit
+  208  ssh root@192.168.120.111
+  209  exit
+  210  ssh root@192.168.0.111
+  211  ssh root@192.168.120.111
+  212  exit
+  213  ssh root@192.168.120.111
+  214  exit
+  215  ssh s12
+  216  ssh s12
+  217  ssh-copy-id s12
+  218  ssh s12
+  219  exit
+  220  ssh s12
+  221  ssh-copy-id s12
+  222  touch ~/.ssh/authorized_keys
+  223  ls -lh ~/.ssh/
+  224  ssh-copy-id s12
+  225  ls -lh ~/.ssh/
+  226  ssh s12
+  227  ssh-copy-id s12
+  228  ssh s12
+  229  ssh-copy-id s12
+  230  ssh s12
+  231  cd shell/
+  232  ls
+  233  ssh s12
+  234  cd /tmp/
+  235  ls
+  236  cd ~/tmp/
+  237  ls
+  238  scp zenoss-collector-tmplt-for-vmware.ova s12:/root
+  239  ssh s12
+  240  ls
+  241  cd ~/shell/
+  242  ls
+  243  ssh s12
+  244  exit
+  245  ssh root@10.1.1.39
+  246  ssh root@10.1.1.39
+  247  ssh root@10.1.1.40
+  248  ssh root@10.1.1.39
+  249  ssh s13
+  250  exit
+  251  ssh s12
+  252  ssh s12
+  253  ssh s12
+  254  ssh s12
+  255  ssh s12
+  256  ssh-copy-id s12
+  257  vi ~/.ssh/config 
+  258  ssh s12
+  259  exit
+  260  ssh root@10.1.1.40
+  261  ssh root@10.1.1.40
+  262  ssh root@10.1.1.40
+  263  ssh root@10.1.1.40
+  264  ssh root@10.1.1.40
+  265  ssh root@10.1.1.40
+  266  ssh root@10.1.1.40
+  267  ssh root@10.1.1.40
+  268  ssh root@10.1.1.40
+  269  ssh root@10.1.1.40
+  270  ssh root@10.1.1.40
+  271  f
+  272  asdf
+  273  as
+  274  f
+  275  asd
+  276  ffsadas
+  277  ssh root@10.1.1.40
+  278  ssh root@10.1.1.40
+  279  ssh root@10.1.1.40
+  280  ssh root@10.1.1.40
+  281  telnet
+  282  ssh root@10.1.1.39
+  283  ifconfig
+  284  ipconfig
+  285  ssh root@10.1.1.40
+  286  ssh root@10.1.1.40 -p 3922
+  287  ssh root@10.1.1.39 -p 3922
+  288  ssh root@10.1.1.39 -p 3922
+  289  ssh root@10.1.1.39 
+  290  ssh root@10.1.1.39 
+  291  ssh root@10.1.1.39 
+  292  ssh s1
+  293  ssh s12
+  294  ssh s12
+  295  cd shell/
+  296  ls
+  297  scp cloud-install-sys-tmplt-ova.sh s12:/root
+  298  cd ~/tmp/
+  299  ls
+  300  scp acton-systemvm-02062012.ova s12:/root
+  301  ssh s12
+  302  ls
+  303  cd ~/shell/
+  304  ls
+  305  ssh s12
+  306  scp s12:/home/source/trunk/ElasterStack/scripts/storage/secondary/createtmplt.sh ./
+  307  ssh s12
+  308  cd ~/tmp/
+  309  ls
+  310  scp zenoss-collector-tmplt-for-vmware.ova  s12:/root
+  311  ssh s12
+  312  ls
+  313  cd ~/shell/
+  314  ls
+  315  scp api_test_kvm.py s12:/root
+  316  ssh s12
+  317  scp s12:/root/api_test_vmware.py ./
+  318  ssh s12
+  319  cd ~/tmp/
+  320  ls
+  321  scp zenoss-collector-tmplt-for-vmware.ova s12:/root
+  322  ssh s12
+  323  exit
+  324  ssh s12
+  325  ssh s12
+  326  ssh s12
+  327  exit
+  328  ssh s12
+  329  ssh s12
+  330  ssh s12
+  331  ssh s12
+  332  ssh s12
+  333  exit
+  334  ssh root@192.168.120.111
+  335  ssh s12
+  336  ssh s12
+  337  exit
+  338  ssh root@192.168.120.111
+  339  exit
+  340  ssh root@192.168.120.111
+  341  ssh-copy-id root@192.168.120.111
+  342  ssh root@192.168.120.111
+  343  exit
+  344  ssh root@192.168.120.111
+  345  exit
+  346  ssh root@192.168.120.111
+  347  exit
+  348  ssh root@192.168.120.17
+  349  ssh s12
+  350  ssh root@192.168.120.110
+  351  exit
+  352  ssh root@192.168.120.111
+  353  exit
+  354  ssh s111
+  355  ssh root@192.168.120.17
+  356  ssh root@192.168.120.17
+  357  ssh root@192.168.120.17
+  358  ssh root@192.168.120.17
+  359  ssh root@192.168.120.110
+  360  exit
+  361  ssh root@10.1.1.111
+  362  ssh-copy-id -i ~/.ssh/id_rsa.pub root@10.1.1.111
+  363  vi ~/.ssh/config 
+  364  ssh s111
+  365  ssh s111
+  366  ssh s111
+  367  ping 10.1.1.111
+  368  ping 10.1.1.111
+  369  ping 10.1.1.111
+  370  ping 10.1.1.111
+  371  ping 10.1.1.111
+  372  ping 10.1.1.111
+  373  ssh s111
+  374  ssh s111
+  375  ssh 192.168.120.17
+  376  ssh root@192.168.120.17
+  377  ssh root@192.168.120.110
+  378  exit
+  379  ssh s111
+  380  ssh s111
+  381  exit
+  382  ssh root@192.168.120.111
+  383  exit
+  384  ssh root@192.168.120.111
+  385  ssh s12
+  386  ssh s12
+  387  exit
+  388  ssh root@192.168.120.110
+  389  exit
+  390  ssh root@192.168.120.110
+  391  exit
+  392  ssh root@192.168.120.109
+  393  ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.120.109
+  394  ssh root@192.168.120.109
+  395  exit
+  396  exit
+  397  vi goto_shell.sh
+  398  chmod +x goto_shell.sh 
+  399  ./goto_shell.sh 
+  400  pwd
+  401  mount c: /c
+  402  ./goto_shell.sh 
+  403  pwd
+  404  cd /c/Users/john/Documents/GitHub/scaffold-shell/
+  405  pwd
+  406  ls
+  407  cd shell/
+  408  ls
+  409  cd debug/
+  410  ls
+  411  chmod +x ./trunk_to_debug_s12.sh 
+  412  ./trunk_to_debug_s12.sh 
+  413  ssh s12
+  414  ./trunk_to_debug_s12.sh 
+  415  ./trunk_to_debug_s12.sh 
+  416  ./trunk_to_debug_s12.sh 
+  417  ./trunk_to_debug_s12.sh 
+  418  ./trunk_to_debug_s12.sh 
+  419  ./trunk_to_debug_s12.sh 
+  420  ./trunk_to_debug_s12.sh 
+  421  ./trunk_to_debug_s12.sh 
+  422  ./trunk_to_debug_s12.sh 
+  423  exit
+  424  ssh s13
+  425  ssh s13
+  426  top
+  427  ssh s13
+  428  ssh s13
+  429  exit
+  430  ssh s12
+  431  scp s12:/root/zenoss-collector-tmplt-for-vmware.ova.gz.zip ~/tmp/
+  432  ssh 172.16.204.135
+  433  ssh root@172.16.204.135
+  434  ssh root@172.16.204.135
+  435  ssh root@172.16.204.135
+  436  ssh root@172.16.204.135
+  437  ssh root@192.168.120.110
+  438  cd C:\Users\john\Documents\GitHub\scaffold-shell
+  439  cd C:\Users\john\Documents\GitHub\scaffold-shell
+  440  mount c: /c
+  441  cd /c/Users/john/Documents/GitHub/scaffold-shell/
+  442  scp root@192.168.120.110:/root/cmd130520.txt ./
+  443  scp root@192.168.120.111:/root/cmd130530.txt ./
+  444  pwd
+  445  ssh root@192.168.120.110
+  446  ssh root@192.168.120.111
+  447  ssh root@192.168.120.110
+  448  exit
+  449  ssh root@192.168.120.111
+  450  ssh root@192.168.120.109
+  451  exit
+  452  ssh s12
+  453  exit
+  454  ssh s12
+  455  xit
+  456  exit
+  457  ssh root@192.168.120.110
+  458  ssh root@192.168.120.111
+  459  scp root@192.168.120.111:/root/cmd_130606.txt ~/shell
+  460  ssh root@192.168.120.111
+  461  scp root@192.168.120.111:/opt/zenoss/Products/Zuul/routers/device.py ./
+  462  scp root@192.168.120.111:/opt/zenoss/Products/Zuul/routers/device.py ./
+  463  ls -lh dev*.py
+  464  scp ./device.py root@192.168.120.253:/home/zenoss
+  465  cd /tmp/
+  466  ls
+  467  scp root@10.1.1.37:/root/centos-zenoss-collector.qcow2.gz.zip ./
+  468  pwd
+  469  ssh root@10.1.1.23
+  470  ssh root@10.1.1.21
+  471  ssh root@10.1.1.21
+  472  ssh s12
+  473  ssh root@10.1.1.21
+  474  ssh root@192.168.120.13
+  475  ssh root@192.168.120.14
+  476  ssh root@192.168.120.111
+  477  ssh root@192.168.120.112
+  478  ssh root@10.1.1.112
+  479  ssh root@10.1.1.21
+  480  vi ~/.ssh/config 
+  481  vi ~/.ssh/known_hosts 
+  482  ssh root@10.1.1.21
+  483  ssh root@10.1.1.23
+  484  vi ~/.ssh/known_hosts 
+  485  ssh root@10.1.1.23
+  486  exit
+  487  ssh s12
+  488  mount d: /d
+  489  scp /d/workspace-for-maven-new/systemVM/zenoss-collector-tmplt-for-vmware.ova  s12:/tmp
+  490  ssh s12
+  491  scp s12:/tmp/zenoss-collector-tmplt-for-vmware.ova.gz.zip /d/workspace-for-maven-new/systemVM/
+  492  scp s12:/tmp/zenoss-collector-tmplt-for-vmware.ova.gz.zip /d/workspace-for-maven-new/systemVM/
+  493  ssh -p 3922 root@192.168.120.223
+  494  ssh -p 3922 root@192.168.120.223
+  495  ssh s12
+  496  exit
+  497  ssh root@10.1.1.14
+  498  ssh root@10.1.1.14
+  499  ping 10.1.1.14
+  500  exit
+  501  history > ./shell/cmd130610.txt
+  502  history > cmd-130610.txt

@@ -65,7 +65,8 @@ if "destroyMonitorVm" == command_type:
 	request['command'] = "destroyMonitorVm"
 	request['id'] = str( mvm_id )
 	request['response']= "json"
-if "stopMonitorVm" == command_type:
+if "listMonitorVm" == command_type:
+    request={ 'command':'listMonitorVm',  'response':'xml'  }
 	print "begin stop monitor vm"
 if "stopMonitorVm" == command_type:
 	print "begin stop monitor vm"

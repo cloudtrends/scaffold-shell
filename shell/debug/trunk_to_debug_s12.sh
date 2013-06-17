@@ -11,16 +11,14 @@ umount /d
 
 mount d: /d
 
-LOCAL_PATH=/d/workspace-for-maven-new/ElasterView
+
+LOCAL_ROOT_PATH=/d/workspace-for-maven-new
+REMOTE_ROOT_PATH=/home/source/trunk
+
+LOCAL_PATH=${LOCAL_ROOT_PATH}/ElasterView
 LOCAL_VIEW_PATH=${LOCAL_PATH}/elasterview-plugin
 
-REMOTE_VIEW_PATH=/home/source/trunk/ElasterView/elasterview-plugin
-
-
-
-
-
-
+REMOTE_VIEW_PATH=${REMOTE_ROOT_PATH}/ElasterView/elasterview-plugin
 
 
 FILE_PROPERTIES=elaster-view_commands.properties
@@ -45,20 +43,106 @@ REMOTE_MODEL_DEVICE_FILE=${REMOTE_VIEW_PATH}/${REFERSH_MODEL_DEVICE_FILE}
 rm -f s12:${REMOTE_MODEL_DEVICE_FILE}
 scp ${LOCAL_MODEL_DEVICE_FILE} s12:${REMOTE_MODEL_DEVICE_FILE}
 
+echo "--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- "
+REFERSH_MODEL_DEVICE_FILE=src/com/tcloud/elaster/api/commands/appliance/AuthZenosMasterToCollectorCmd.java
+LOCAL_MODEL_DEVICE_FILE=${LOCAL_VIEW_PATH}/${REFERSH_MODEL_DEVICE_FILE}
+REMOTE_MODEL_DEVICE_FILE=${REMOTE_VIEW_PATH}/${REFERSH_MODEL_DEVICE_FILE}
+rm -f s12:${REMOTE_MODEL_DEVICE_FILE}
+scp ${LOCAL_MODEL_DEVICE_FILE} s12:${REMOTE_MODEL_DEVICE_FILE}
+
+echo "--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- "
+REFERSH_MODEL_DEVICE_FILE=src/com/tcloud/elaster/utils/ZenossUtils.java
+LOCAL_MODEL_DEVICE_FILE=${LOCAL_VIEW_PATH}/${REFERSH_MODEL_DEVICE_FILE}
+REMOTE_MODEL_DEVICE_FILE=${REMOTE_VIEW_PATH}/${REFERSH_MODEL_DEVICE_FILE}
+rm -f s12:${REMOTE_MODEL_DEVICE_FILE}
+scp ${LOCAL_MODEL_DEVICE_FILE} s12:${REMOTE_MODEL_DEVICE_FILE}
+
+
+
+
+
+echo "--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- "
+REFERSH_MODEL_DEVICE_FILE=src/com/tcloud/elaster/view/ElasterViewService.java
+LOCAL_MODEL_DEVICE_FILE=${LOCAL_VIEW_PATH}/${REFERSH_MODEL_DEVICE_FILE}
+REMOTE_MODEL_DEVICE_FILE=${REMOTE_VIEW_PATH}/${REFERSH_MODEL_DEVICE_FILE}
+rm -f s12:${REMOTE_MODEL_DEVICE_FILE}
+scp ${LOCAL_MODEL_DEVICE_FILE} s12:${REMOTE_MODEL_DEVICE_FILE}
+
+
+
+
+
+echo "--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- "
+REFERSH_MODEL_DEVICE_FILE=src/com/tcloud/elaster/view/ElasterViewManagerImpl.java
+LOCAL_MODEL_DEVICE_FILE=${LOCAL_VIEW_PATH}/${REFERSH_MODEL_DEVICE_FILE}
+REMOTE_MODEL_DEVICE_FILE=${REMOTE_VIEW_PATH}/${REFERSH_MODEL_DEVICE_FILE}
+rm -f s12:${REMOTE_MODEL_DEVICE_FILE}
+scp ${LOCAL_MODEL_DEVICE_FILE} s12:${REMOTE_MODEL_DEVICE_FILE}
+
+
+
 
 echo "--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- "
 
 ssh s12 "chown root ${REMOTE_VIEW_PATH}/src/com/tcloud/elaster/api/commands/device/*.java"
 ssh s12 "chmod 666 ${REMOTE_VIEW_PATH}/src/com/tcloud/elaster/api/commands/device/*.java"
-
 ssh s12 "ls -lh ${REMOTE_VIEW_PATH}/src/com/tcloud/elaster/api/commands/device/"
 
 
 
 
+echo "=== === === === === === === === === === === core === === === === === === === === === === === === === "
+
+
+PROJECT_NAME=ElasterStack
+SUB_PROJECT=core
+LOCAL_THIS_PATH=${LOCAL_ROOT_PATH}/${PROJECT_NAME}/${SUB_PROJECT}
+REMOTE_THIS_PATH=${REMOTE_ROOT_PATH}/${PROJECT_NAME}/${SUB_PROJECT}
 
 
 
+
+
+
+echo "=== === === === === === === === === === === server === === === === === === === === === === === === === "
+
+
+PROJECT_NAME=ElasterStack
+SUB_PROJECT=server
+LOCAL_THIS_PATH=${LOCAL_ROOT_PATH}/${PROJECT_NAME}/${SUB_PROJECT}
+REMOTE_THIS_PATH=${REMOTE_ROOT_PATH}/${PROJECT_NAME}/${SUB_PROJECT}
+
+
+
+echo "=== === === === === === === === === === === api === === === === === === === === === === === === === "
+
+PROJECT_NAME=ElasterStack
+SUB_PROJECT=api
+LOCAL_THIS_PATH=${LOCAL_ROOT_PATH}/${PROJECT_NAME}/${SUB_PROJECT}
+REMOTE_THIS_PATH=${REMOTE_ROOT_PATH}/${PROJECT_NAME}/${SUB_PROJECT}
+
+
+
+
+
+echo "=== === === === === === === === === === === utils === === === === === === === === === === === === === "
+
+PROJECT_NAME=ElasterStack
+SUB_PROJECT=utils
+LOCAL_THIS_PATH=${LOCAL_ROOT_PATH}/${PROJECT_NAME}/${SUB_PROJECT}
+REMOTE_THIS_PATH=${REMOTE_ROOT_PATH}/${PROJECT_NAME}/${SUB_PROJECT}
+
+
+TMP_FILE=src/com/cloud/utils/db/GenericDaoBase.java
+rm -f s12:${REMOTE_THIS_PATH}/${TMP_FILE}
+scp ${LOCAL_THIS_PATH}/${TMP_FILE} s12:${REMOTE_THIS_PATH}/${TMP_FILE}
+
+
+
+
+
+
+echo "=== === === === === === === === === === === client === === === === === === === === === === === === === "
 
 
 

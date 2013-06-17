@@ -1,0 +1,1000 @@
+    6  yum install nfs-utils nfs4-acl-tools portmap
+    7  ls /home/source/ElasterStack/
+    8  vi /etc/exports 
+    9  service nfsd start
+   10  service nfs start
+   11  cd /home/source/ElasterStack/
+   12  ls
+   13  cd plugins/
+   14  ls
+   15  ls -lh
+   16  mvn install
+   17  cd ..
+   18  ant clean-all
+   19  ant build-all
+   20  find ./ -name "*.xml.*"  | xargs grep "random"
+   21  find ./ -name "c*.xml.*"  | xargs grep "random"
+   22  pwd
+   23  cd plugins/
+   24  ls
+   25  pwd
+   26  mkdir /cloud-plugin-elasterview
+   27  mkdir cloud-plugin-elasterview
+   28  mkdir cloud-plugin-elasterview/src
+   29  cd cloud-plugin-elasterview/src/
+   30  touch abc.java
+   31  ls
+   32  ls -lh
+   33  cd ../..
+   34  ls
+   35  ls file-systems/
+   36  ls file-systems/netapp/
+   37  tree ./
+   38  yum install tree
+   39  tree ./
+   40  cd /home/source/
+   41  ls
+   42  wget http://source.tcloudcomputing.com.cn/svn/Elaster51/trunk/ElasterView/elasterview-plugin
+   43  ls
+   44  svn checkout http://source.tcloudcomputing.com.cn/svn/Elaster51/trunk/ElasterView/elasterview-plugin
+   45  ls
+   46  cd elasterview-plugin/
+   47  tree ./
+   48  pwd
+   49  ls /home/source/elasterview-plugin/pom.xml 
+   50  exi
+   51  exit
+   52  cd /home/source/elasterview-plugin/
+   53  ls
+   54  exit
+   55  cd /home/source/ElasterStack/plugins/
+   56  ls
+   57  cd cloud-plugin-elasterview/
+   58  tree ./
+   59  exit
+   60  cd /home/source/ElasterStack/plugins/cloud-plugin-elasterview/
+   61  ls
+   62  tree ./
+   63  cd ..
+   64  ant clean-all
+   65  ant build-all
+   66  vi pom.xml 
+   67  vi build.xml 
+   68  vi ./build/build-cloud-plugins.xml 
+   69  cd plugins/cloud-plugin-elasterview/
+   70  ls
+   71  cd ..
+   72  ant clean-all
+   73  ant build-all
+   74  find ./build  -name "*.xml" | xargs grep "build-all"
+   75  find ./build  -name "*.xml" | xargs grep "build-plugins"
+   76  ant clean-all
+   77  ant build-all
+   78  cd plugins/cloud-plugin-elasterview/
+   79  mvn install
+   80  ls
+   81  vi pom.xml 
+   82  mvn install
+   83  cd ..
+   84  ant clean-all
+   85  ant build-all
+   86  vi plugins/cloud-plugin-elasterview/pom.xml 
+   87  mvn -Dnonoss -P deps
+   88  mvn clean
+   89  mvn -Dnonoss install
+   90  ant clean-all
+   91  ant build-all
+   92  mvn -Dnonoss install
+   93  ant build-all
+   94  mvn -Dnonoss -P deps
+   95  ant build-all
+   96  ls ~/m2
+   97  ls ~/.m2
+   98  ls ~/.m2/repository/org/apache/httpcomponents/httpcore
+   99  ls deps/
+  100  ls deps/http*
+  101  ls ~/.m2/repository/org/apache/httpcomponents/http*
+  102  ls ~/.m2/repository/org/apache/httpcomponents/httpclient/
+  103  ls ~/.m2/repository/org/apache/httpcomponents/httpclient/4.2.2/
+  104  cp ~/.m2/repository/org/apache/httpcomponents/httpclient/4.2.2/httpclient-4.2.2.jar  ./deps/
+  105  ant build
+  106  ant build-all
+  107  exit
+  108  mvn -help
+  109  ifconfig
+  110  ifconfig -a
+  111  cp /etc/sysconfig/network-scripts/ifcfg-eth2 /etc/sysconfig/network-scripts/ifcfg-eth3
+  112  vi /etc/sysconfig/network-scripts/ifcfg-eth3
+  113  ping 172.16.18.19
+  114  ping 172.16.18.199
+  115  vi /etc/sysconfig/network-scripts/ifcfg-eth3
+  116  service network restart
+  117  vi /etc/sysconfig/network-scripts/ifcfg-eth3
+  118  service network restart
+  119  ifconfig
+  120  vi /etc/sysconfig/network-scripts/ifcfg-eth3
+  121  ping 172.16.206.64
+  122  service network restart
+  123  cd /home/source/ElasterStack/
+  124  ls
+  125  ant debug
+  126  ip addr
+  127  ant clean-all
+  128  ant build-all
+  129  ant debug
+  130  cd plugins/cloud-plugin-elasterview/
+  131  ls
+  132  rm -rf ./com/
+  133  ls
+  134  cd ..
+  135  ant clean-all
+  136  ant build-all
+  137  ant debug
+  138  ant clean-all 
+  139  ant build-all
+  140  ls client/tomcatconf/*.in
+  141  ls client/tomcatconf/e*.in
+  142  ant clean-all
+  143  ant build-all
+  144  ant debug
+  145  ant clean-all
+  146  ant build-all
+  147  ant debug
+  148  ant debug | grep config_file
+  149  ant clean-all
+  150  ant build-all
+  151  ant debug | grep config_file
+  152  ant deploy-server
+  153  ant debug | grep config_file
+  154  ant clean-all
+  155  ant build-all
+  156  ant deploy-server
+  157  ant debug | grep config_file
+  158  ant debug 
+  159  ant clean-all
+  160  ant build-all
+  161  ant deploy-server
+  162  ant debug | grep config_file
+  163  ant debug 
+  164  ant clean-all ; ant build-all ; ant deploy-server
+  165  ant debug
+  166  ant clean-all ; ant build-all ; ant deploy-server
+  167  ant debug
+  168  exit
+  169  find / -name "vmops.log"
+  170  vi /home/source/ElasterStack/vmops.log 
+  171  cd /home/source/ElasterStack/
+  172  mv vmops.log  vmops.log.1
+  173  tail -f vmops.log
+  174  tail -f ./vmops.log
+  175  cat ./vmops.log | grep "xml"
+  176  rm -rf ./vmops.log
+  177  rm -rf ./vmops.log.1 
+  178  tail -f ./vmops.log | grep config_file
+  179  cat ./vmops.log | grep config_file
+  180  tail -f ./vmops.log | grep config_file
+  181  tail -f ./vmops.log 
+  182  tail -f ./vmops.log | grep config_file
+  183  exit
+  184  cd /home/source/ElasterStack/
+  185  ls server/src/com/cloud/api/ApiServer.java 
+  186  cat server/src/com/cloud/api/ApiServer.java | grep config_file
+  187  exit
+  188  cd /home/source/ElasterStack/
+  189  ant debug
+  190  nt build-all ; ant deploy-server ; ant debug
+  191  ant clean-all ; nt build-all ; ant deploy-server ; ant debug
+  192  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  193  ls ~
+  194  exit
+  195  find / -name "cloud-install-sys-tmplt"
+  196  ls /mnt/
+  197  mkdir -p /mnt/secondary
+  198  mount 192.168.120.13:/export/e51sec  /mnt/secondary/
+  199  /home/apache-tomcat-6.0.33/webapps/client/WEB-INF/lib/scripts/storage/secondary/cloud-install-sys-tmplt
+  200  /home/apache-tomcat-6.0.33/webapps/client/WEB-INF/lib/scripts/storage/secondary/cloud-install-sys-tmplt -f ~/acton-systemvm-02062012.vhd.bz2  -m /mnt/secondary/  -h xenserver -F
+  201  exit
+  202  ls
+  203  ./cloud-install-sys-tmplt -f ~/acton-systemvm-02062012.vhd.bz2  -m /mnt/secondary/  -h xenserver -F
+  204  ls /mnt/secondary/
+  205  ls /mnt/secondary/template/
+  206  ls /mnt/secondary/template/tmpl/
+  207  1
+  208  ls /mnt/secondary/template/tmpl/1/
+  209  ls /mnt/secondary/template/tmpl/1/1/
+  210  exit
+  211  mysql
+  212  service mysqld restart
+  213  EXIT
+  214  exit
+  215  tail -f /home/source/ElasterStack/vmops.log 
+  216  ant clean-all ;ant build-all ; ant deploy-server ; ant debug
+  217  exit
+  218  ./cloud-install-sys-tmplt -f ~/acton-systemvm-02062012.vhd.bz2  -m /mnt/secondary/  -h xenserver -F
+  219  cd /home/source/ElasterStack/
+  220  ant debug
+  221  ant build-elaster-view
+  222  ant deploy-server ; ant debug
+  223  ant clean-all ;ant build-all ;ant deploy-server;ant debug
+  224  ant debug
+  225  ant build-elaster-view
+  226  ant deploy-server ;ant debug
+  227  ant clean-all;ant build-all ; ant deploy-server;ant debug
+  228  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  229  ant debug
+  230  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  231  ant debug
+  232  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  233  ant debug
+  234  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  235  exit
+  236  cd /home/source/ElasterStack/
+  237  tail -f ./vmops.log
+  238  exit
+  239  cd /home/source/ElasterStack/
+  240  cd plugins/
+  241  find ./ -name "*.java" | xargs grep "Adapter"
+  242  exit
+  243  service mysqld start
+  244  exit
+  245  cd /home/source/ElasterStack/
+  246  ant debug
+  247  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  248  ant build-elaster-view
+  249  ant build-elaster-view ; ant deploy-server ; ant debug
+  250  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  251  ant build-elaster-view2 ; ant deploy-server ; ant debug
+  252  exit
+  253  cd /home/source/ElasterStack/
+  254  tail -f ./vmops.log
+  255  exit
+  256  cd /home/source/ElasterStack/
+  257  ant build-elaster-view2 ; ant deploy-server ; ant debug
+  258  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  259  cd /home/source/ElasterStack/
+  260  ant clean-all ; ant build-all ; ant deploy-server; ant debug
+  261  exit
+  262  ls ~/.ssh/
+  263  exit
+  264  cd /home/source/ElasterStack/
+  265  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  266  cd /home/source/ElasterStack/
+  267  ant clean-all ; ant build-all ; ant deploy-server; ant debug
+  268  exit
+  269  service mysqld start
+  270  mysql -uroot -e "select * from cloud.nics "
+  271  mysql -uroot -e " DELETE FROM `cloud`.`domain_monitor` ; DELETE FROM `cloud`.`vm_instance` WHERE `name` like 'm%' ; "
+  272  mysql -uroot -e " DELETE FROM `cloud`.`domain_monitor`  ;"
+  273  mysql -uroot -e " DELETE FROM `cloud`.`domain_monitor`  "
+  274  mysql -uroot -e " DELETE FROM cloud.domain_monitor  "
+  275  mysql -uroot -e " DELETE FROM cloud.domain_monitor ; DELETE FROM cloud.vm_instance WHERE name like 'm%' ; "
+  276  tail -f /home/source/ElasterStack/vmops.log
+  277  cd /home/source/ElasterStack/
+  278  ant debug
+  279  ant build-all ; ant deploy-server ; ant debug
+  280  mysql -uroot -e " DELETE FROM cloud.domain_monitor ; DELETE FROM cloud.vm_instance WHERE name like 'm%' ; "
+  281  exit
+  282  tail -f /home/source/ElasterStack/vmops.log
+  283  exit
+  284  cd /home/source/ElasterStack/
+  285  ant clean-all ;ant build-all ; ant deploy-server ;ant debug
+  286  exit
+  287  ls
+  288  cp cloud-install-sys-tmplt cloud-install-user-tmplt
+  289  vi cloud-install-user-tmplt 
+  290  echo "hello world"
+  291  echo -n "hello world"
+  292  vi cloud-install-user-tmplt 
+  293  cd /home/source/ElasterStack/
+  294  ant debug
+  295  tail -f /home/source/ElasterStack/vmops.log
+  296  exit
+  297  mysql -uroot -e " DELETE FROM cloud.domain_monitor ; DELETE FROM cloud.vm_instance WHERE name like 'm%' ; "
+  298  exit
+  299  cd /home/source/ElasterStack/
+  300  ant debug
+  301  service mysqld restart
+  302  ant debug
+  303  ant clean-all;ant build-all;ant deploy-server;ant debug
+  304  exit
+  305  mysql -uroot -e " DELETE FROM cloud.domain_monitor ; DELETE FROM cloud.vm_instance WHERE name like 'm%' ; "
+  306  exit
+  307  mysql -uroot -e " DELETE FROM cloud.domain_monitor ; DELETE FROM cloud.vm_instance WHERE name like 'm%' ; "
+  308  exit
+  309  mysql -uroot -e " DELETE FROM cloud.domain_monitor ; DELETE FROM cloud.vm_instance WHERE name like 'm%' ; "
+  310  exit
+  311  tail -f /home/source/ElasterStack/vmops.log
+  312  cd /home/source/ElasterStack/
+  313  ant clean-all ; ant build-all ; ant deploy-server; ant debug
+  314  mysql -uroot -e " DELETE FROM cloud.domain_monitor ; DELETE FROM cloud.vm_instance WHERE name like 'm%' ; "
+  315  exit
+  316  ls
+  317  scp root@192.168.120.13:/root/centos63-monitor-vm-test.vhd ./
+  318  ls
+  319  ls /mnt/
+  320  ls /mnt/secondary/
+  321  ls /mnt/secondary/template/
+  322  tree /mnt/secondary/template/
+  323  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F
+  324  vi ./cloud-install-mvm-tmplt-vhd 
+  325  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F
+  326  tree /mnt/secondary/template/
+  327  vi ./cloud-install-mvm-tmplt-vhd 
+  328  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F
+  329  tree /mnt/secondary/template/
+  330  vi ./cloud-install-mvm-tmplt-vhd 
+  331  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F
+  332  vi ./cloud-install-mvm-tmplt-vhd 
+  333  tree /mnt/secondary/template/
+  334  vi ./cloud-install-mvm-tmplt-vhd 
+  335  ./cloud-install-mvm-tmplt-vhd 
+  336  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F
+  337  vi ./cloud-install-mvm-tmplt-vhd 
+  338  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F
+  339  vi ./cloud-install-mvm-tmplt-vhd 
+  340  mysql
+  341  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F
+  342  vi ./cloud-install-mvm-tmplt-vhd 
+  343  tree /mnt/secondary/template/
+  344  vi ./cloud-install-mvm-tmplt-vhd 
+  345  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F
+  346  vi ./cloud-install-mvm-tmplt-vhd 
+  347  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F
+  348  vi ./cloud-install-mvm-tmplt-vhd 
+  349  exit
+  350  cd /home/source/ElasterStack/
+  351  ant clean-all ; ant build-all ; ant deploy-server; ant debug
+  352  ant debug
+  353  exit
+  354  ssh root@192.168.120.14
+  355  ssh root@192.168.120.13
+  356  ssh root@192.168.120.14
+  357  tail -f /home/source/ElasterStack/vmops.log
+  358  ant debug
+  359  ls
+  360  cd /home/source/ElasterStack/
+  361  ant debug
+  362  ant deploy-db
+  363  ant deploydb
+  364  ant debug
+  365  ant clean-all ; ant build-all ; ant deploy-server; ant debug
+  366  ant debug
+  367  ant deploydb
+  368  ant debug
+  369  exit
+  370  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F
+  371  ls
+  372  ./cloud-install-sys-tmplt -m /mnt/secondary/ -f ./acton-systemvm-02062012.vhd.bz2 -h xenserver -F
+  373  ifconfig
+  374  ./cloud-install-sys-tmplt -m /mnt/secondary/ -f ./acton-systemvm-02062012.vhd.bz2 -h xenserver -F
+  375  exit
+  376  ls
+  377  vi cloud-install-mvm-tmplt-vhd 
+  378  exit
+  379  ls
+  380  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F
+  381  exi
+  382  ls /mnt/secondary/
+  383  ls /mnt/secondary/template/
+  384  ls /mnt/secondary/template/tmpl/
+  385  ls /mnt/secondary/template/tmpl/1/
+  386  exit
+  387  tail -f /home/source/ElasterStack/vmops.log
+  388  ifconfig
+  389  exit
+  390  cd /home/source/ElasterStack/
+  391  tail -f vmops.log
+  392  ls
+  393  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F
+  394  ls /mnt/secondary/
+  395  mkdir /mnt/primary
+  396  mount 192.168.120.13:/export/e51pri /mnt/primary/
+  397  ls /mnt/primary/
+  398  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F  -p /mnt/primary/
+  399  ls /mnt/primary/
+  400  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F  -p /mnt/primary/
+  401  ls /mnt/primary/
+  402  ls /mnt/secondary/
+  403  ls /mnt/secondary/template/tmpl/
+  404  ls /mnt/secondary/template/tmpl/1/
+  405  ls /mnt/secondary/template/tmpl/1/101/
+  406  umount /mnt/secondary/
+  407  umount /mnt/primary/
+  408  umount /mnt/secondary/
+  409  mount 192.168.120.13:/export/e51pri  /mnt/primary/
+  410  mount 192.168.120.13:/export/e51sec  /mnt/secondary/
+  411  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F  -p /mnt/primary/
+  412  ipaddr 
+  413  ip addr
+  414  scp 192.168.120.14:/export/ssvmtest/0f03995d-709f-f634-6cfb-cb895ffe1b34/
+  415  scp 192.168.120.14:/export/ssvmtest/0f03995d-709f-f634-6cfb-cb895ffe1b34/centos63-030218.tar.gz ./
+  416  ls -lh
+  417  tar xzf centos63-030218.tar.gz 
+  418  ls -lh
+  419  rm -rf centos63-030218.tar.gz 
+  420  rm -rf centos63-monitor-vm-test.vhd 
+  421  mv ./f4807b44-976b-4336-b664-11b8a9cbaf4a.vhd ./centos63-030218.vhd
+  422  ls -lh
+  423  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-030218.vhd -h xenserver -F  -p /mnt/primary/
+  424  scp 192.168.120.14:/export/ssvmtest/0f03995d-709f-f634-6cfb-cb895ffe1b34/centos63-030218.tar.gz ./
+  425  rm -rf centos63-030218.vhd 
+  426  tar xzf centos63-030218.tar.gz 
+  427  rm -rf centos63-030218.tar.gz 
+  428  ls -lh
+  429  mv ./f4807b44-976b-4336-b664-11b8a9cbaf4a.vhd  ./centos63-030218.vhd
+  430  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-030218.vhd -h xenserver -F  -p /mnt/primary/
+  431  rm -rf centos63-030218.tar.gz 
+  432  scp 192.168.120.14:/export/ssvmtest/0f03995d-709f-f634-6cfb-cb895ffe1b34/centos63-030218.tar.gz ./
+  433  tar xzf centos63-030218.tar.gz 
+  434  rm -rf centos63-030218.tar.gz 
+  435  mv ./f4807b44-976b-4336-b664-11b8a9cbaf4a.vhd  ./centos63-030218.vhd
+  436  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-030218.vhd -h xenserver -F  -p /mnt/primar
+  437  ls /mnt/primary/
+  438  umount /mnt/primary/
+  439  ls /mnt/primary/
+  440  cd ~
+  441  ./cloud-install-sys-tmplt -f ~/acton-systemvm-02062012.vhd.bz2  -m /mnt/secondary/  -h xenserver -F
+  442  ls /mnt/primary/
+  443  mount 192.168.120.35:/mnt/nfs-vg-001/vol-nfs-h15-ext4/pri /mnt/primary/
+  444  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-030218.vhd -h xenserver -F  -p /mnt/primary/
+  445  ./cloud-install-sys-tmplt -f ~/acton-systemvm-02062012.vhd.bz2  -m /mnt/secondary/  -h xenserver -F
+  446  ls /mnt/secondary/template/tmpl/1/1
+  447  ls -lh /mnt/secondary/template/tmpl/1/1
+  448  ./cloud-install-sys-tmplt -f ~/acton-systemvm-02062012.vhd.bz2  -m /mnt/secondary/  -h xenserver -F
+  449  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-030218.vhd -h xenserver -F  -p /mnt/primary/
+  450  yum install MySQL-python
+  451  pwd
+  452  vi elaster-tmptl.py
+  453  python elaster-tmptl.py 
+  454  vi elaster-tmptl.py
+  455  python elaster-tmptl.py 
+  456  vi elaster-tmptl.py
+  457  python elaster-tmptl.py 
+  458  vi elaster-tmptl.py
+  459  python elaster-tmptl.py 
+  460  ls
+  461  vi cloud-install-mvm-tmplt-vhd 
+  462  vi createtmplt.sh 
+  463  vi cloud-install-mvm-tmplt-vhd 
+  464  ls
+  465  cd /home/source/ElasterStack/
+  466  ant debug
+  467  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  468  ant debug
+  469  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  470  ant debug
+  471  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  472  ant debug
+  473  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  474  ant debug
+  475  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  476  ant debug
+  477  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  478  ant debug
+  479  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  480  ant debug
+  481  ping 192.168.120.35
+  482  ls /mnt/secondary/
+  483  umount /mnt/secondary/
+  484  ls /mnt/secondary/
+  485  umount /mnt/secondary/
+  486  ls /mnt/secondary/
+  487  rm /mnt/secondary/template/
+  488  rm -rf /mnt/secondary/template/
+  489  ls /mnt/secondary/
+  490  mount 192.168.120.35:/mnt/nfs-vg-001/vol-nfs-h15-ext4/pri/ /mnt/secondary/
+  491  touch /mnt/secondary/hello-openfiler.txt
+  492  ls /mnt/secondary/
+  493  ls /mnt/
+  494  ls /mnt/primary/
+  495  rf -rf /mnt/primary/*
+  496  ls /mnt/primary/
+  497  rf -rf /mnt/primary/*.vhd
+  498  rm -rf /mnt/primary/*.vhd
+  499  ls /mnt/primary/
+  500  rm -rf /mnt/primary/
+  501  rm -rf /mnt/primary
+  502  cd /mnt/primary/
+  503  ls
+  504  cd ~
+  505  cd /mnt/
+  506  ls
+  507  rm -rf primary/
+  508  umount /mnt/primary/
+  509  rm -rf primary/
+  510  ls /mnt/
+  511  mkdir /mnt/primary
+  512  mount 192.168.120.35:/mnt/nfs-vg-001/vol-nfs-h15-ext4/sec/ /mnt/secondary/
+  513  mount 192.168.120.35:/mnt/nfs-vg-001/vol-nfs-h15-ext4/sec/ /mnt/primary/
+  514  umount /mnt/primary/
+  515  umount /mnt/secondary/
+  516  mount 192.168.120.35:/mnt/nfs-vg-001/vol-nfs-h15-ext4/sec/ /mnt/secondary/
+  517  mount 192.168.120.35:/mnt/nfs-vg-001/vol-nfs-h15-ext4/pri /mnt/primary/
+  518  cd /home/source/ElasterStack/
+  519  history > cmd_130222.txt
+  520  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F
+  521  cd ~
+  522  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-monitor-vm-test.vhd -h xenserver -F
+  523  ant debug
+  524  cd /home/source/ElasterStack/
+  525  ant debug
+  526  ant deploy-server
+  527  ant deploydb
+  528  ant debug
+  529  ant clean-all ; ant build-all ; ant deploy-server ; ant debug^C
+  530  exit
+  531  cd /home/source/ElasterStack/
+  532  ant debug
+  533  cd /home/source/ElasterStack/
+  534  ant debug
+  535  ant clean-all ; ant build-all ; ant deploy-server ; ant debug^C
+  536  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  537  vi server/src/com/cloud/api/ApiDispatcher.java 
+  538  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  539  exit
+  540  ls
+  541  ls /mnt/secondary/
+  542  ls /mnt/primary/
+  543  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./centos63-030218.vhd -h xenserver -F -p /mnt/primary/
+  544  vi ./cloud-install-mvm-tmplt-vhd 
+  545  exit
+  546  ls
+  547  rm centos63-030218.vhd 
+  548  rm 166f7d75-5478-4368-87cf-e0f483a865ef.vhd 
+  549  rm 3ec9815d-9aea-4e1f-be9f-91f8bb2b80a6.vhd 
+  550  rm 65ab2d12-2830-4dcc-9dc9-20ef21d992a2.vhd 
+  551  rm jdk-7u11-linux-x64.gz 
+  552  rm cdfeb69d-a059-479f-918b-55222548d987.vhd 
+  553   ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./mv -h xenserver -F -p /mnt/primary/
+  554  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./mvm-101-130228.vhd -h xenserver -F -p /mnt/primary/
+  555  exit
+  556  ls -lh
+  557  rm mvm-101-130228.vhd 
+  558  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./7cc37fd6-b0ae-46c1-85d2-2d41585d50cb.vhd -h xenserver -F -p /mnt/primary/
+  559  exit
+  560  cd /home/source/ElasterStack/
+  561  ant debug
+  562  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  563  ant debug
+  564  exit
+  565  man rpm
+  566  exit
+  567  cd /home/source/ElasterStack/
+  568  ant debug
+  569  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  570  exit
+  571  cd /home/source/ElasterStack/
+  572  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  573  java -version
+  574  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  575  ant clean-all ; ant build-all ; ant deploy-server ; ant debugexit
+  576  cd /home/source/ElasterStack/
+  577  ant clean-all ; ant build-all ; ant deploy-server ; ant debugexit
+  578  ls plugins/
+  579  ls plugins/host-allocators/
+  580  ls plugins/host-allocators/random/
+  581  ls plugins/host-allocators/random/src/com/cloud/
+  582  ls plugins/host-allocators/random/src/com/cloud/agent/
+  583  ls plugins/host-allocators/random/src/com/cloud/agent/manager/
+  584  ls plugins/host-allocators/random/src/com/cloud/agent/manager/allocator/
+  585  ls plugins/host-allocators/random/src/com/cloud/agent/manager/allocator/impl/
+  586  rm -rf plugins/host-allocators/random/src/com/cloud/agent/manager/allocator/impl/RandomAllocator.java 
+  587  ls plugins/host-allocators/random/src/com/cloud/agent/manager/allocator/impl/
+  588  ant clean-all ; ant build-all ; ant deploy-server ; ant debugexit
+  589  ls plugins/host-allocators/random/src/com/cloud/agent/manager/allocator/impl/
+  590  ant clean-all ; ant build-all ; ant deploy-server ; ant debugexit
+  591  vi build.xml 
+  592  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  593  exit
+  594  cd /home/source/ElasterStack/
+  595  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  596  ls ./api/src/com/cloud/l10n/
+  597  exit
+  598  cd /home/source/ElasterStack/
+  599  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  600  cd /home/source/ElasterStack/exit
+  601  exit
+  602  cd /home/source/ElasterStack/
+  603  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  604  ant deploydb
+  605  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  606  ManagementServerExtImplexit
+  607  exit
+  608  ls -lh
+  609  ls /mnt/secondary/
+  610  rm -rf /mnt/secondary/*
+  611  ls /mnt/secondary/
+  612  ls /mnt/primary/
+  613  rm -rf /mnt/primary/*
+  614  cd ~
+  615  ls
+  616  ./cloud-install-sys-tmplt -f ~/acton-systemvm-02062012.vhd.bz2 -m /mnt/secondary/ -h xenserver -F
+  617  ls -lh
+  618  tar xzf centos-zenoss-tmplt.tar.gz 
+  619  ls -lh
+  620  rm 7cc37fd6-b0ae-46c1-85d2-2d41585d50cb.vhd 
+  621  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./1712ac78-a976-448d-8fee-47cd83dc8764.vhd -h xenserver -F -p /mnt/primary/
+  622  exit
+  623  find /home/source/ -name "id_rsa.cloud"
+  624  exit
+  625  cd /home/source/ElasterStack/
+  626  cd /home/source/ElasterStack/ ; ant debug
+  627  mysql
+  628  ant deploydb;
+  629  ant debug
+  630  ant deploy-server
+  631  ant debug
+  632  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  633  ant debug
+  634  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  635  exit
+  636  cd /home/source/ElasterStack/
+  637  ant debug
+  638  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  639  ls -lh
+  640  rm centos-zenoss-tmplt.tar.gz 
+  641  rm 1712ac78-a976-448d-8fee-47cd83dc8764.vhd 
+  642  ls -lh
+  643  rm centos-63-mvm-tmplt.tar.gz 
+  644  ls -lh
+  645  tar xzf centos-63-mvm-tmplt.tar.gz 
+  646  rm centos-63-mvm-tmplt.tar.gz 
+  647  ls -lh
+  648  rm 1712ac78-a976-448d-8fee-47cd83dc8764.vhd 
+  649  ls -lh
+  650  tar xzf centos-63-mvm-tmplt.tar.gz 
+  651  ls -lh
+  652  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./1712ac78-a976-448d-8fee-47cd83dc8764.vhd -h xenserver -F -p /mnt/primary/
+  653  ip addr
+  654  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./1712ac78-a976-448d-8fee-47cd83dc8764.vhd -h xenserver -F -p /mnt/primary/
+  655  cd /home/source/ElasterStack/
+  656  tail -f vmops.log
+  657  cd ~
+  658  ls -lh
+  659  vi cloud-install-mvm-tmplt-vhd 
+  660  ./cloud-install-sys-tmplt -f ~/acton-systemvm-02062012.vhd.bz2 -m /mnt/secondary/ -h xenserver -F
+  661  service mysql stop
+  662  service mysqld stop
+  663  service mysqld start
+  664  cd /home/source/ElasterStack/
+  665  tail -f vmops.log
+  666  cd /home/source/ElasterStack/
+  667  ant debug
+  668  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  669  ls
+  670  ls -lh
+  671  rm 1712ac78-a976-448d-8fee-47cd83dc8764.vhd 
+  672  ls -lh
+  673  rm centos-63-mvm-tmplt.tar.gz 
+  674  ls -lh
+  675  ip addr
+  676  ls -lh
+  677  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./1712ac78-a976-448d-8fee-47cd83dc8764.vhd -h xenserver -F -p /mnt/primary/
+  678  ls -lh
+  679  rm 1712ac78-a976-448d-8fee-47cd83dc8764.vhd 
+  680  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./1712ac78-a976-448d-8fee-47cd83dc8764.vhd -h xenserver -F -p /mnt/primary/
+  681  rm 1712ac78-a976-448d-8fee-47cd83dc8764.vhd 
+  682  ls -lh
+  683  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./1712ac78-a976-448d-8fee-47cd83dc8764.vhd -h xenserver -F -p /mnt/primary/
+  684  rm 1712ac78-a976-448d-8fee-47cd83dc8764.vhd 
+  685  ls -lth
+  686  ip addr
+  687  ls -lth
+  688  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./1712ac78-a976-448d-8fee-47cd83dc8764.vhd -h xenserver -F -p /mnt/primary/
+  689  ls -lh
+  690  rm 1712ac78-a976-448d-8fee-47cd83dc8764.vhd 
+  691  ls -lh
+  692  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./cf082918-b9e3-461d-8521-8c310be79775.vhd -h xenserver -F -p /mnt/primary/
+  693  ls -lh
+  694  rm cf082918-b9e3-461d-8521-8c310be79775.vhd 
+  695  ls -lh
+  696  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./cf082918-b9e3-461d-8521-8c310be79775.vhd -h xenserver -F -p /mnt/primary/
+  697  ls -lh
+  698  rm -rf cf082918-b9e3-461d-8521-8c310be79775.vhd 
+  699  ls -lh
+  700  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./cf082918-b9e3-461d-8521-8c310be79775.vhd -h xenserver -F -p /mnt/primary/
+  701  rm -rf cf082918-b9e3-461d-8521-8c310be79775.vhd 
+  702  ls -lh
+  703  rm f927f088-005c-45ea-96b2-fa09dd0e6de3.vhd 
+  704  ls -lh
+  705  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./cf082918-b9e3-461d-8521-8c310be79775.vhd -h xenserver -F -p /mnt/primary/
+  706  exit
+  707  cd /home/source/ElasterStack/
+  708  ant debug
+  709  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  710  ant debug
+  711  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  712  exit
+  713  ls -lh
+  714  rm -rf cf082918-b9e3-461d-8521-8c310be79775.vhd 
+  715  ls -lh
+  716  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./cf082918-b9e3-461d-8521-8c310be79775.vhd -h xenserver -F -p /mnt/primary/
+  717  exit
+  718  cd /home/source/ElasterStack/
+  719  ant debug
+  720  exit
+  721  vi b.sh
+  722  chmod +x b.sh 
+  723  vi a.sh
+  724  chomod +x a.sh
+  725  chmod +x a.sh
+  726  ./a.sh 
+  727  exit
+  728  showmount -e fs.tcloudcomputing.com.cn
+  729  mkdir /mnt/public
+  730  mount fs.tcloudcomputing.com.cn/public /mnt/public/
+  731  mount -t nfs fs.tcloudcomputing.com.cn/public /mnt/public/
+  732  mount -t nfs fs.tcloudcomputing.com.cn:/public /mnt/public/
+  733  ls
+  734  urar ZenPacks.community.TCloudComputingCollectors.rar 
+  735  wget http://pkgs.repoforge.org/unrar/unrar-4.0.7-1.el6.rf.x86_64.rpm
+  736  rpm -Uvh unrar-4.0.7-1.el6.rf.x86_64.rpm
+  737  unrar ZenPacks.community.TCloudComputingCollectors.rar 
+  738  unrar -e ZenPacks.community.TCloudComputingCollectors.rar 
+  739  unrar e ZenPacks.community.TCloudComputingCollectors.rar 
+  740  ls
+  741  rm ZenPacks.community.TCloudComputingCollectors.rar 
+  742  rm unrar-4.0.7-1.el6.rf.x86_64.rpm 
+  743  ls -lh
+  744  tar xzf ZenPacks.community.TCloudComputingCollectors.tar.gz 
+  745  ls -lh
+  746  cd ZenPacks.community.TCloudComputingCollectors
+  747  ls
+  748  python setup.py  bdist_egg
+  749  ls
+  750  find / -name "ZenPacks.community.TCloudComputingCollectors-1.0-py2.6.egg"
+  751  ls -lh
+  752  ls dist/
+  753  mv dist/ZenPacks.community.TCloudComputingCollectors-1.0-py2.6.egg  ~/
+  754  exit
+  755  ls -lh
+  756  rm ./pre*
+  757  rm -f ./dia*
+  758  ls -lh
+  759  rm -rf ./ec*
+  760  ls -lh
+  761  tar xzf monitor-vm-template.tar.gz 
+  762  ls -lh
+  763  rm monitor-vm-template.tar.gz 
+  764  rm -rf ff5794c71e91079d733d3a5dcf77efc70386ed 
+  765  rm -rf f1a52847bd9e52ef48fb14fa88c4578b5baa57 
+  766  rm -rf fbd6289498b19571c5abefdfc329022d163c63 
+  767  rm -rf MANIFEST.in 
+  768  rm -rf ./b*
+  769  rm -rf ./a*
+  770  ls -lh
+  771  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./monitor-vm-template-130311.vhd -h xenserver -F -p /mnt/primary/
+  772  exit
+  773  cd /home/source/ElasterStack/
+  774  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  775  ls -lh
+  776  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  777  exit
+  778  wget http://jenkins.cloudstack.org/job/build-systemvm-master/lastSuccessfulBuild/artifact/tools/appliance/dist/systemvmtemplate-2013-03-10-master-xen.vhd.bz2
+  779  pwd
+  780  ls
+  781  exit
+  782  cd /home/source/ElasterStack/
+  783  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  784  ant debug
+  785  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  786  ant debug
+  787  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  788  exit
+  789  cd /home/source/ElasterStack/
+  790  ant debug
+  791  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  792  ls -lh
+  793  rm vmops.log.*
+  794  rm -f vmops.log.*
+  795  ls -lh
+  796  cd plugins/cloud-plugin-elasterview/
+  797  ls
+  798  cat elaster-view_commands.properties 
+  799  ls
+  800  cd /home/source/ElasterStack/
+  801  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  802  openssl --version
+  803  echo @?
+  804  echo @
+  805  echo @!
+  806  echo @?
+  807  echo #?
+  808  openssl --version
+  809  echo #?
+  810  echo #!
+  811  openssl --version
+  812  echo $?
+  813  ip addr
+  814  exit
+  815  ip addr
+  816  cat /etc/sysconfig/network-scripts/ifcfg-eth3 
+  817  exit
+  818  cd /home/source/ElasterStack/
+  819  ant debug
+  820  exit
+  821  cd /home/source/ElasterStack/
+  822  ls
+  823  ant debug
+  824  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  825  ant deploydb
+  826  ant deploy-server
+  827  ant clean-all ; ant build-all ; ant deploy-server ; ant deploydb
+  828  ant debug
+  829  ls /mnt/
+  830  ls /mnt/secondary/
+  831  showmount 
+  832  mount
+  833  cd ~
+  834  ls
+  835  exit
+  836  ./cloud-install-sys-tmplt -f ./acton-systemvm-02062012.vhd.bz2 -m /mnt/secondary/ -h xenserver -F
+  837  cd /home/source/ElasterStack/
+  838  ant debug
+  839  cd /home/source/ElasterStack/
+  840  tail -f vmops.log 
+  841  ip addr
+  842  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  843  cd /home/source/ElasterStack/
+  844  ant debug
+  845  reboot
+  846  cd /home/source/ElasterStack/
+  847  reboot
+  848  find /home/source/  -name "*.iso"
+  849  find /home/source/ -name "*.xml*" | xargs grep "systemvm"
+  850  find /home/source/ -name "*.xml*" | xargs grep "mkisofs"
+  851  ls
+  852  rm setup.py 
+  853  rm -f master 
+  854  rm -f install.log
+  855  ls -lh
+  856  exit
+  857  ls -lh
+  858  rm ./d*
+  859  ls -lh
+  860  rm ./e*
+  861  ls -lh
+  862  rm f4430063c67e885c929947f2b65d4f14bcd53d 
+  863  ls -lh
+  864  rm -r ./0*
+  865  rm -f ./0*
+  866  rm -f ./1*
+  867  rm -f ./2*
+  868  rm -f ./3*
+  869  rm -f ./4*
+  870  rm -f ./5*
+  871  rm -f ./6*
+  872  rm -f ./7*
+  873  rm -f ./8*
+  874  ls -lh
+  875  rm -f ./9*
+  876  rm -f ./c1*
+  877  rm -f ./c3*
+  878  rm -f ./c7*
+  879  rm -f ./c9*
+  880  rm -f ./cb*
+  881  ls -lh
+  882  rm monitor-vm-template-130311.vhd 
+  883  exit
+  884  ls /mnt/primary/
+  885  ls /mnt/secondary/
+  886  cd /home/source/ElasterStack/
+  887  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  888  ant debug
+  889  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  890  ant debug
+  891  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  892  exit
+  893  vi c.sh
+  894  chmod +x c.sh 
+  895  ./c.sh 
+  896  vi c.sh
+  897  ./c.sh 
+  898  vi c.sh
+  899  ./c.sh 
+  900  vi c.sh
+  901  ./c.sh 
+  902  vi c.sh
+  903  ./c.sh 
+  904  vi c.sh
+  905  ./c.sh 
+  906  vi c.sh
+  907  vi c.sh a b c d
+  908  ./c.sh a b c d
+  909  ./c.sh a=b b=d c=d d=f
+  910  vi c.sh
+  911  ./c.sh a=b b=d c=d d=f
+  912  exit
+  913  cd /home/source/ElasterStack/
+  914  tail -f vmops.log
+  915  ant debug
+  916  netstat -tnl | grep 8080
+  917  lsof 
+  918  lsof | grep 8080
+  919  netstat -tnl | grep 8080
+  920  ant debug
+  921  lsof | grep 8080
+  922  lsof | grep 80
+  923  ps aux | grep tomcat
+  924  kill -9 18058
+  925  lsof | grep 80
+  926  ps aux | grep tomcat
+  927  ant debug
+  928  exit
+  929  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  930  cd /home/source/ElasterStack/
+  931  ant clean-all ; ant build-all ; ant deploy-server ; ant debug
+  932  ant debug
+  933  exit
+  934  tail -f /home/source/ElasterStack/vmops.log
+  935  ls -lh
+  936   rm cf082918-b9e3-461d-8521-8c310be79775.vhd 
+  937  ls -lh
+  938  rm cf082918-b9e3-461d-8521-8c310be79775.vhd 
+  939  exit
+  940  ping 192.168.120.55
+  941  ip addr
+  942  exit
+  943  tail -f /home/source/ElasterStack/vmops.log
+  944  ip addr
+  945  exit
+  946  df -lh
+  947  wget  https://github.com/downloads/mininet/mininet/mininet-2.0.0-113012-amd64-ovf.zip
+  948  pwd
+  949  exit
+  950  ls -lh
+  951  rm mininet-2.0.0-113012-amd64-ovf.zip 
+  952  exit
+  953  tail -f /home/source/ElasterStack/vmops.log
+  954  exit
+  955  ls /mnt/primary/
+  956  ls /mnt/secondary/
+  957  showmount -e 192.168.120.35
+  958  mount 192.168.120.35:/mnt/nfs-vg-001/vol-nfs-h15-ext4/pri /mnt/primary/
+  959  mount 192.168.120.35:/mnt/nfs-vg-001/vol-nfs-h15-ext4/sec /mnt/secondary/
+  960  ls /mnt/secondary/
+  961  ls /mnt/primary/
+  962  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./cf082918-b9e3-461d-8521-8c310be79775.vhd -h xenserver -F  -p /mnt/primary
+  963  pwd
+  964  ls -lh
+  965  rm cf082918-b9e3-461d-8521-8c310be79775.vhd 
+  966  ls -lh
+  967  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./cf082918-b9e3-461d-8521-8c310be79775.vhd -h xenserver -F  -p /mnt/primary
+  968  rm cf082918-b9e3-461d-8521-8c310be79775.vhd 
+  969  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./cf082918-b9e3-461d-8521-8c310be79775.vhd -h xenserver -F  -p /mnt/primary
+  970  rm cf082918-b9e3-461d-8521-8c310be79775.vhd 
+  971  ls -lh
+  972  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./cf082918-b9e3-461d-8521-8c310be79775.vhd -h xenserver -F  -p /mnt/primary
+  973  ls -lh
+  974  rm cf082918-b9e3-461d-8521-8c310be79775.vhd 
+  975  ls -lh
+  976  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./cf082918-b9e3-461d-8521-8c310be79775.vhd -h xenserver -F  -p /mnt/primary
+  977  exit
+  978  123456
+  979  ls -lh
+  980  ./cloud-install-sys-tmplt -f ~/acton-systemvm-02062012.vhd.bz2 -m /mnt/secondary/ -h xenserver -F
+  981  ./cloud-install-mvm-tmplt-vhd -m /mnt/secondary/ -f ./cf082918-b9e3-461d-8521-8c310be79775.vhd -h xenserver -F  -p /mnt/primary
+  982  cd /home/source/ElasterStack/
+  983  ant debug
+  984  ls /mnt/primary/
+  985  ls /mnt/secondary/
+  986  mount
+  987  unmount /mnt/secondary/
+  988  umount /mnt/secondary/
+  989  umount /mnt/primary/
+  990  mount /mnt/secondary/ 192.168.120.35:/mnt/nfs-vg-001/vol-nfs-h15-ext4/sec
+  991  mount -t /mnt/secondary/ 192.168.120.35:/mnt/nfs-vg-001/vol-nfs-h15-ext4/sec
+  992  mount -t nfs /mnt/secondary/ 192.168.120.35:/mnt/nfs-vg-001/vol-nfs-h15-ext4/sec
+  993  mount -t nfs /mnt/primary/ 192.168.120.35:/mnt/nfs-vg-001/vol-nfs-h15-ext4/pri
+  994  ls /mnt/secondary/
+  995  ls /mnt/secondary/template/
+  996  ls /mnt/secondary/template/tmpl/
+  997  ls /mnt/secondary/template/tmpl/1
+  998  ls /mnt/secondary/template/tmpl/101
+  999  ls /mnt/primary/
+ 1000  exit
+ 1001  mount
+ 1002  mount -t nfs /mnt/primary/ 192.168.120.35:/mnt/nfs-vg-001/vol-nfs-h15-ext4/pri/
+ 1003  ls /mnt/primary/
+ 1004  ./cloud-install-sys-tmplt -f ~/acton-systemvm-02062012.vhd.bz2 -m /mnt/secondary/ -h xenserver -F
+ 1005  history > cmd_130327.txt
