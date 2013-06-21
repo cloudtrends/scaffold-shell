@@ -9,12 +9,12 @@ global config file , dir's , java classes , skipped file or path etc.
 '''
 
 # location of workspace of ElasterStack
-config_cs_dir="C:\Users\chunfeng\workspace42_maintrunk"
+config_cs_dir="/Users/cloud/git-cloudstack/cloudstack/"
 
 # dir of backup file when replacing
-config_replace_root_dir="c:\java\exception-replace-formal"
+config_replace_root_dir="/Users/cloud/git-cloudstack/cloudstack_html/"
 
-#备份文件夹
+#backup dir
 config_cs_source_backup_dir = "cs_source_backup"
 config_cs_slicer_no_change_check_dir = "cs_slicer_source_check"
 #生成新文件测试目录
@@ -49,7 +49,7 @@ config_only_allow_file_list= None
 
 
 #比较 path 的时候会自动加上 sep
-config_skip_path_list = [ "test" ,"tcloud"]
+config_skip_path_list = [ "test" ]
 
 #通过 cs_formal_cs_excep_utils 来保证 exception的唯一性
 #这份白名单是必须的！
