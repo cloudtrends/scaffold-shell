@@ -20,6 +20,29 @@ from cs_exception_common         import *
 def show_java_files( start_dir  ):
     print "begin ..."
 
+pack_class={}
+def get_package_class_dict(full_path):
+    parts = full_path.split( "/" )
+    b_flag=False
+    new_parts=[]
+    for one in parts:
+        if one == "src":
+            b_flag = True
+            continue
+        if not b_flag:
+            continue
+        new_parts.append( one )
+    len_parts=len( new_parts )
+    tmp_i=0
+    pack_str=""
+    for one in new_parts:
+        print one
+        tmp_i = tmp_i + 1
+        if tmp_i == (len_parts-1):
+            break
+        pack_str= pack_str + one + "."
+    pack_str=[:-1]
+    print pack_str
 
 
 if "__main__" == __name__ :
@@ -40,6 +63,7 @@ if "__main__" == __name__ :
     only_allow_file_list=None
     for file_name in getNextJavaSourceFile( start_path , skip_file_list , skip_path_list , only_allow_file_list  ):
         print file_name
+        get_package_class_dict( file_name )
 
 
 
