@@ -2,7 +2,7 @@
 
 
 
-yum install git* -y;
+yum install git -y;
 yum install wget -y;
 yum install openssh -y ; yum install openssh-clients -y
 
@@ -60,6 +60,11 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
     yum install -y  tigervnc-server tigervnc-server-module libXfont pixman xterm xorg-x11-twm
     yum -y install tigervnc-server pixman pixman-devel libXfont
 
+yum install gcc -y
+yum install sqlite-devel -y
 
 
+echo "cat /proc/sys/net/ipv4/ip_forward"
+
+cat /proc/sys/net/ipv4/ip_forward
 
