@@ -3,6 +3,7 @@
 
 
 yum install git -y;
+yum install tree -y;
 yum install wget -y;
 yum install openssh -y ; yum install openssh-clients -y
 
