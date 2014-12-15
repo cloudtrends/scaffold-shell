@@ -17,6 +17,10 @@ echo "HOSTNAME=localhost.localdomain" >> /etc/sysconfig/network
 
 ifdown eth0
 sed -i '/^HWADDR=.*$/d' /etc/sysconfig/network-scripts/ifcfg-eth0
+sed -i '/^UUID=.*$/d' /etc/sysconfig/network-scripts/ifcfg-eth0
+sed -i '/^BOOTPROTO=none$/d' /etc/sysconfig/network-scripts/ifcfg-eth0
+# if return is 1 then add dhcp
+
 sed -i '/^HWADDR=.*$/d' /etc/sysconfig/network-scripts/ifcfg-eth1
 sed -i '/^HWADDR=.*$/d' /etc/sysconfig/network-scripts/ifcfg-eth2
 sed -i '/^HWADDR=.*$/d' /etc/sysconfig/network-scripts/ifcfg-eth3
