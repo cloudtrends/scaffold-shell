@@ -9,11 +9,11 @@ mkdir -p /root/share
 ln -s /mnt/share/ /usr/share/nginx/html/share
 
 
-#/etc/nginx/conf.d/default.conf
+CF=/etc/nginx/conf.d/default.conf
 
 
-LN=`awk '/index.htm;/{print NR - 1}' ./default.conf`
-sed -i "${LN}i\tautoindex on;" ./default.conf
+LN=`awk '/index.htm;/{print NR - 1}' ${CF}`
+sed -i "${LN}i\tautoindex on;" ${CF}
 
 chkconfig nginx on
 service nginx start
