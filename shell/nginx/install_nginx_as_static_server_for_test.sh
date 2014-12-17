@@ -5,7 +5,7 @@
 yum install nginx -y 
 
 
-mkdir -p /root/share
+mkdir -p /mnt/share
 ln -s /mnt/share/ /usr/share/nginx/html/share
 
 
