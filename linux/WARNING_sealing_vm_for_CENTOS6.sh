@@ -24,7 +24,7 @@ sed -i '/^BOOTPROTO=none$/d' /etc/sysconfig/network-scripts/ifcfg-eth0
 sed -i '/^HWADDR=.*$/d' /etc/sysconfig/network-scripts/ifcfg-eth1
 sed -i '/^HWADDR=.*$/d' /etc/sysconfig/network-scripts/ifcfg-eth2
 sed -i '/^HWADDR=.*$/d' /etc/sysconfig/network-scripts/ifcfg-eth3
-ifup eth0
+#ifup eth0
 rm -f /etc/udev/rules.d/70-persistent-net.rules
 
 
