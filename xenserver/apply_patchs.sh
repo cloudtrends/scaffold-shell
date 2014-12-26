@@ -8,6 +8,10 @@
 
 
 
+mkdir /mnt/hotfix
+showmount -e 10.6.1.2
+mount 10.6.1.2:/home/xenserver62 /mnt/hotfix/
+cd /mnt/hotfix/hotfix/
 
 
 
@@ -18,6 +22,6 @@
 
 #HOSTUUID=545cdf83-947c-4d9e-aaf9-12bf0d1dec86
 #PNAME=XS62ESP1002 
-UUUID=` cd ${PNAME};xe patch-upload file-name=${PNAME}.xsupdate ; cd ..` ; xe patch-apply uuid=${UUUID} host-uuid=${HOSTUUID}; cd ..
+UUUID=` cd ${PNAME};xe patch-upload file-name=${PNAME}.xsupdate ; cd ..` ; xe patch-apply uuid=${UUUID} host-uuid=${HOSTUUID};
  
 
